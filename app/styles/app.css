@@ -1,10 +1,12 @@
 *{
     box-sizing: border-box;
 }
+
+
 .calendar{
     background-color: white;
-    height: 720px;
-    width: 70%;
+    height: 460px;
+    width: 40%;
     margin: auto;
     border: solid black 2px;
 
@@ -14,6 +16,7 @@
     margin: auto;
     width: 80%;
     height: 720px;
+    background-color: rgb(157, 216, 255);
 }
 
 .date{
@@ -38,22 +41,23 @@
     text-shadow: 0.3rem;
 }
 
-.day:first-child{
-}
+
 
 .eachDay {
 
     display: inline-block;    
-    width: 13.659%;
-    height: 80px;
-    border: solid black 1px;
+    width: 13.459%;
+    height: 40px;
+    border: none;
 }
 
 .eachDay button{
     width: 100%;
-    height: 76px;
-    background-color: white;
-    border: none;
+    height: 40px;
+    background-color: rgba(234, 248, 255, 0.911);
+    border:none;
+    
+    
 
 
 }
@@ -64,7 +68,9 @@
     transition: background-color 0.3s;
 }
 
-
+.eachDay p{
+    color: rgba(150, 150, 150, 0.856);
+}
 
 
 .eachMonth{
@@ -74,7 +80,7 @@
 }
 
 .grid{
-    width: 70%;
+    width: 95%;
     margin: auto;
 }
 
@@ -84,14 +90,14 @@
 }
 .left-nav button{
     background-image: url('/assets/images/left.png');
-    width: 40px;
+    width: 30px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40px;
+    height: 30px;
     float: left;
     display: inline-block;
-    margin-top: 1%;
+    margin-top: 3%;
     margin-left: 2% ;
     margin-right: 2%;
     border: none;
@@ -108,31 +114,38 @@
 
 .nav-bar{
 
-    width: 70%;
+    width: 100%;
     height: 60px;
     margin: auto;
-    border: black solid 2px;
+    border-top: black solid 2px;
 }
 
 .nav-bar h2{
       text-align: center;
 }
 
+.prev, .next{
+    border: none;
+}
+
 .prev button, .next button{
     opacity: 0.3;
-    background-color: grey;
+    background-color: rgba(212, 211, 211, 0.863);
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .right-nav button{
     background-image: url("/assets/images/right.png");
-    width: 40px;
+    width: 30px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40px;
+    height: 30px;
     float: left;
     display: inline-block;
-    margin-top: 1%;
+    margin-top: 3%;
     margin-left: 2%;
     border: none;
     background-color: white;
@@ -162,12 +175,6 @@
 
 }
 
-.today button{
-
-    background-color: aquamarine;
-    border-color: yellow;
-}
-
 .title{
     margin: auto;
     width: 100%;
@@ -177,14 +184,15 @@
 }
 
 .week{
-    width: 70%;
-    height: 60px;
-    border-color: black;
-    border-style: solid;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
+    width: 95%;
+    height: 40px;
     margin: auto;
+}
+
+.week h4{
+    text-align: center;
+    font-family: serif;
+    color: rgba(110, 107, 107, 0.89);
 }
 
 

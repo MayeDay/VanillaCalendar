@@ -149,7 +149,8 @@
           {{/each}}
           {{#each days as |day|}}
               <div class="eachDay available">
-                  <button type="submit" onclick={{action "selectDate" day}}>{{day}}
+                  <button type="submit" onclick={{action "selectDate" day}}>
+                      <p>{{day}}</p>
                   </button>
               </div>
           {{/each}}
@@ -165,7 +166,7 @@
      
   
   */
-  {"id":"4YfSrutW","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[2,\"\\n \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n        \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n    \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\",[35,2]],null],[12],[13],[13],[2,\"\\n   \\n    \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n        \"],[10,\"h4\"],[12],[1,[34,3]],[13],[2,\"\\n    \"],[13],[2,\"\\n\\n    \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,4]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n        \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                \"],[10,\"button\"],[14,4,\"submit\"],[12],[1,[32,3]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[1,[32,2]],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,9]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                \"],[10,\"button\"],[14,4,\"submit\"],[12],[1,[32,1]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n        \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,10]],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n   \\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"date\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar-navigation.hbs"}});
+  {"id":"tfmvWgKu","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[2,\"\\n \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n        \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n    \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\",[35,2]],null],[12],[13],[13],[2,\"\\n   \\n    \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n        \"],[10,\"h4\"],[12],[1,[34,3]],[13],[2,\"\\n    \"],[13],[2,\"\\n\\n    \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,4]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n        \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                \"],[10,\"button\"],[14,4,\"submit\"],[12],[1,[32,3]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                    \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,9]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                \"],[10,\"button\"],[14,4,\"submit\"],[12],[1,[32,1]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n        \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,10]],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n   \\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"date\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar-navigation.hbs"}});
 
   let CalendarNavigationComponent = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, (_class = (_temp = class CalendarNavigationComponent extends _component.default {
     constructor(...args) {
@@ -209,16 +210,16 @@
 
       _defineProperty(this, "actions", {
         selectDate(day) {
-          let dates = document.querySelectorAll(".available button");
+          let dates = document.querySelectorAll(".available button p");
 
           for (var i = 0; i < dates.length; i++) {
             if (day == dates[i].innerHTML) {
-              dates[i].setAttribute("style", "background-color:blue;");
+              dates[i].parentElement.setAttribute("style", "background-color:blue;");
               this.format = `${this.selectedMonth + 1}/${day}/${this.selectedYear}`;
               document.querySelector(".textfield input").value = this.format;
             } else if (this.date.value != this.date.getDate()) {
               console.log(this.date.value);
-              dates[i].setAttribute("style", "background-color:white;");
+              dates[i].parentElement.setAttribute("style", "background-color: rgba(224, 245, 255, 0.856);");
             }
           }
         }
@@ -304,9 +305,9 @@
         }
       }
 
-      let dates = document.querySelectorAll(".available button");
+      let dates = document.querySelectorAll(".available button p");
       dates.forEach(date => {
-        if (date.innerHTML != this.date.getDate()) date.setAttribute("style", "background-color:white");
+        if (date.innerHTML != this.date.getDate()) date.parentElement.setAttribute("style", " background-color: rgba(224, 245, 255, 0.856);");
       });
     }
 
@@ -349,19 +350,19 @@
         }
       }
 
-      let dates = document.querySelectorAll(".available button");
+      let dates = document.querySelectorAll(".available button p");
       dates.forEach(date => {
-        date.setAttribute("style", "background-color:white");
+        date.parentElement.setAttribute("style", "background-color: rgba(224, 245, 255, 0.856);");
       });
     }
 
     render() {
-      let dates = document.querySelectorAll(".available button");
+      let dates = document.querySelectorAll(".grid .available button p");
       console.log(dates);
       dates.forEach(date => {
         if (date.innerHTML == this.date.getDate()) {
           console.log(this.date.getDay());
-          date.setAttribute("style", "background-color: red");
+          date.parentElement.setAttribute("style", "background-color: red");
         }
       });
     }

@@ -26,7 +26,8 @@
         {{/each}}
         {{#each days as |day|}}
             <div class="eachDay available">
-                <button type="submit" onclick={{action "selectDate" day}}>{{day}}
+                <button type="submit" onclick={{action "selectDate" day}}>
+                    <p>{{day}}</p>
                 </button>
             </div>
         {{/each}}

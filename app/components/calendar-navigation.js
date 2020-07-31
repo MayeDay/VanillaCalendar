@@ -99,17 +99,17 @@ export default class CalendarNavigationComponent extends Component {
     actions = {
         selectDate(day){
 
-            let dates = document.querySelectorAll(".available button");
+            let dates = document.querySelectorAll(".available button p");
     
             for(var i = 0; i < dates.length;i++){
                 if(day == dates[i].innerHTML){
-                    dates[i].setAttribute("style","background-color:blue;")
+                    dates[i].parentElement.setAttribute("style","background-color:blue;")
                     
                     this.format = `${this.selectedMonth+1}/${day}/${this.selectedYear}`
                     document.querySelector(".textfield input").value = this.format;
                 }else if(this.date.value !=this.date.getDate()){
                     console.log(this.date.value);
-                    dates[i].setAttribute("style","background-color:white;")
+                    dates[i].parentElement.setAttribute("style","background-color: rgba(224, 245, 255, 0.856);")
                 }
             }
         }
@@ -157,11 +157,11 @@ export default class CalendarNavigationComponent extends Component {
             }
         }
 
-        let dates = document.querySelectorAll(".available button");
+        let dates = document.querySelectorAll(".available button p");
 
         dates.forEach(date => {
             if(date.innerHTML !=this.date.getDate())
-            date.setAttribute("style", "background-color:white");
+            date.parentElement.setAttribute("style", " background-color: rgba(224, 245, 255, 0.856);");
         });
     }
 
@@ -209,21 +209,21 @@ export default class CalendarNavigationComponent extends Component {
                 this.nextDays.push(count);
             }
         }
-        let dates = document.querySelectorAll(".available button");
+        let dates = document.querySelectorAll(".available button p");
 
         dates.forEach(date => {
-            date.setAttribute("style", "background-color:white");
+            date.parentElement.setAttribute("style", "background-color: rgba(224, 245, 255, 0.856);");
         });
         
       
     }
     render(){
-        let dates = document.querySelectorAll(".available button");
+        let dates = document.querySelectorAll(".grid .available button p");
         console.log(dates);
         dates.forEach(date => {
             if(date.innerHTML == this.date.getDate()){
                 console.log(this.date.getDay());
-                date.setAttribute("style", "background-color: red");
+                date.parentElement.setAttribute("style", "background-color: red");
             }
         });
     }

@@ -1,57 +1,30 @@
-# calendar-app
+# calendly
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Instructions
 
-## Prerequisites
+You are to build a simple calendar widget as shown in the screenshot in
+`calendly.png`.
 
-You will need the following things properly installed on your computer.
+There are a the features that have to work:
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+First time loading the page:
 
-## Installation
+1. User should see the text field filled out with the current date in the format of "MM/DD/YYYY"
+2. User should see the calendar widget with the current date highlighted.
 
-* `git clone <repository-url>` this repository
-* `cd calendar-app`
-* `npm install`
+Interacting with the widget:
 
-## Running / Development
+1. User should be able to move between months using the arrow icons
+2. User should be able to click on any date, and the text field should show the new date
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+## Requirements
 
-### Code Generators
+- Node.js v12.16.1
+- npm
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Getting Started
 
-### Running Tests
+- Install npm packages: `npm install`
+- Run the server: `npm start`
+- Visit the site: `http://localhost:4200`
 
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 export default class CalendarNavigationComponent extends Component {
 
     months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    weekdays = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+    weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     date = new Date();
     @tracked
@@ -103,13 +103,14 @@ export default class CalendarNavigationComponent extends Component {
     
             for(var i = 0; i < dates.length;i++){
                 if(day == dates[i].innerHTML){
-                    dates[i].parentElement.setAttribute("style","background-color:blue;")
+                    dates[i].parentElement.setAttribute("style", "background-color: rgba(123, 167, 248, 0.822);");
                     
+
                     this.format = `${this.selectedMonth+1}/${day}/${this.selectedYear}`
                     document.querySelector(".textfield input").value = this.format;
                 }else if(this.date.value !=this.date.getDate()){
                     console.log(this.date.value);
-                    dates[i].parentElement.setAttribute("style","background-color: rgba(224, 245, 255, 0.856);")
+                    dates[i].parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
                 }
             }
         }
@@ -161,9 +162,10 @@ export default class CalendarNavigationComponent extends Component {
 
         dates.forEach(date => {
             if(date.innerHTML !=this.date.getDate())
-            date.parentElement.setAttribute("style", " background-color: rgba(224, 245, 255, 0.856);");
+            date.parentElement.setAttribute("style", " background-color: rgba(234, 248, 255, 0.911);");
         });
     }
+    
 
        moveLeft(){
 
@@ -212,10 +214,10 @@ export default class CalendarNavigationComponent extends Component {
         let dates = document.querySelectorAll(".available button p");
 
         dates.forEach(date => {
-            date.parentElement.setAttribute("style", "background-color: rgba(224, 245, 255, 0.856);");
+            date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
         });
         
-      
+
     }
     render(){
         let dates = document.querySelectorAll(".grid .available button p");

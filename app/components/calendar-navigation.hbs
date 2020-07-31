@@ -21,7 +21,9 @@
     <div class ="grid">
         {{#each prevDays as |prev|}}
             <div class="eachDay prev">
-                <button type="submit">{{prev}}</button>
+                <button type="submit">
+                    <p>{{prev}}</p>
+                </button>
             </div>
         {{/each}}
         {{#each days as |day|}}
@@ -33,7 +35,9 @@
         {{/each}}
         {{#each nextDays as |next|}}
             <div class="eachDay next">
-                <button type="submit">{{next}}</button>
+                <button type="submit">
+                    <p>{{next}}</p>
+                </button>
             </div>
         {{/each}}
     </div>

@@ -1,8 +1,15 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+.available button{
+    border: none;
+    margin: 0;
+    padding: 0;
 
+}
 .calendar{
     background-color: white;
     height: 460px;
@@ -15,7 +22,7 @@
 .container{
     margin: auto;
     width: 80%;
-    height: 720px;
+    height: 730px;
     background-color: rgb(157, 216, 255);
 }
 
@@ -26,6 +33,9 @@
     display: inline-block;
     float: left;
     margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(110, 107, 107, 0.89);
+    margin-top: 3.5%;
 }
 
 .date h4{
@@ -38,7 +48,6 @@
     width: 10%;
     margin-left: 4.2%;
     padding-right: 2%;
-    text-shadow: 0.3rem;
 }
 
 
@@ -53,7 +62,7 @@
 
 .eachDay button{
     width: 100%;
-    height: 40px;
+    height: 38px;
     background-color: rgba(234, 248, 255, 0.911);
     border:none;
     
@@ -70,13 +79,7 @@
 
 .eachDay p{
     color: rgba(150, 150, 150, 0.856);
-}
-
-
-.eachMonth{
-
-    width: 70%;
-    margin: auto;
+    font-size: smaller;
 }
 
 .grid{
@@ -122,7 +125,10 @@
 
 .nav-bar h2{
       text-align: center;
-}
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgba(110, 107, 107, 0.89);
+     
+    }
 
 .prev, .next{
     border: none;
@@ -181,6 +187,8 @@
     height: 100px;
     text-align: center;
     font-size: x-large;
+    padding-top: 2%;
+    
 }
 
 .week{

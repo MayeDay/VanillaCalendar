@@ -164,7 +164,7 @@ export default class CalendarComponent extends Component {
         dates.forEach(date => {
             if(date.innerHTML !=this.date.getDate())
             date.parentElement.setAttribute("style", " background-color: rgba(234, 248, 255, 0.911);");
-            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()){
+            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth() &&this.selectedYear == new Date().getFullYear()){
                 date.parentElement.classList.add("currentDay");
             }else{
                 date.parentElement.classList.remove("currentDay");
@@ -221,7 +221,7 @@ export default class CalendarComponent extends Component {
 
         dates.forEach(date => {
             date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
-            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()){
+            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()&&this.selectedYear == new Date().getFullYear()){
                 date.parentElement.classList.add("currentDay");
             }else{
                 date.parentElement.classList.remove("currentDay");
@@ -233,7 +233,7 @@ export default class CalendarComponent extends Component {
     render(){
         let dates = document.querySelectorAll(".grid .available button p");
         dates.forEach(date => {
-            if(date.innerHTML == this.date.getDate() && this.selectedMonth == this.date.getMonth()){
+            if(date.innerHTML == this.date.getDate() && this.selectedMonth == this.date.getMonth()&&this.selectedYear == new Date().getFullYear()){
                 date.parentElement.classList.add("currentDay");
             }
         });

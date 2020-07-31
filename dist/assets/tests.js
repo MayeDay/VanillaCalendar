@@ -68,6 +68,18 @@ define("calendar-app/tests/test-helper", ["calendar-app/app", "calendar-app/conf
   (0, _testHelpers.setApplication)(_app.default.create(_environment.default.APP));
   (0, _emberQunit.start)();
 });
+define("calendar-app/tests/unit/services/header-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Service | header', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks); // TODO: Replace this with your real tests.
+
+    (0, _qunit.test)('it exists', function (assert) {
+      let service = this.owner.lookup('service:header');
+      assert.ok(service);
+    });
+  });
+});
 define('calendar-app/config/environment', [], function() {
   var prefix = 'calendar-app';
 try {

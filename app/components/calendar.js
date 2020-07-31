@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
+import {inject as service} from '@ember/service';
 
 export default class CalendarComponent extends Component {
     months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -50,20 +50,24 @@ export default class CalendarComponent extends Component {
     @tracked 
     nextDayIndex = 1;
 
-    
+    @tracked 
+    currentDay;
+
+    @service 
+    ("header") services;
+
+
     
     header(){
 
-        let prev = new Date(this.date.getFullYear(), this.date.getMonth(),1);
-
+        let prev = this.services.getFullDate(this.date.getFullYear(), this.date.getMonth(), 1);
+        
         this.firstDayIndex = prev.getDay();
-        this.numberOfDays = new Date(this.selectedYear, this.selectedMonth +1, 0).getDate();
+        this.numberOfDays = this.services.getDays(this.selectedYear, this.selectedMonth);
 
         for(let x = prev.getDay()-1; x >= 0; x--){
             this.prevDays.push(this.numberOfDays - x);
         }
-
-        console.log(this.numberOfDays)
     
         for(var i = 1; i< this.numberOfDays + 1; i++){
             this.days.push(i);
@@ -72,7 +76,6 @@ export default class CalendarComponent extends Component {
        
 
         let next = new Date(this.date.getFullYear(), this.date.getMonth()+1,1);
-
         this.nextDayIndex = next.getDay();
         // console.log(next.getDay());
         let max = 42;
@@ -124,8 +127,7 @@ export default class CalendarComponent extends Component {
         this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
         this.numberOfDays = new Date(this.selectedYear, this.selectedMonth +1, 0).getDate();
 
-       this.days = [];
-        console.log(new Date(this.selectedYear, this.selectedMonth +1, 0));
+        this.days = [];
 
         for(var i = 1; i< this.numberOfDays + 1; i++){
             this.days.push(i);
@@ -162,6 +164,11 @@ export default class CalendarComponent extends Component {
         dates.forEach(date => {
             if(date.innerHTML !=this.date.getDate())
             date.parentElement.setAttribute("style", " background-color: rgba(234, 248, 255, 0.911);");
+            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()){
+                date.parentElement.classList.add("currentDay");
+            }else{
+                date.parentElement.classList.remove("currentDay");
+            }
         });
     }
     
@@ -214,17 +221,20 @@ export default class CalendarComponent extends Component {
 
         dates.forEach(date => {
             date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
+            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()){
+                date.parentElement.classList.add("currentDay");
+            }else{
+                date.parentElement.classList.remove("currentDay");
+            }
         });
-        
+
 
     }
     render(){
         let dates = document.querySelectorAll(".grid .available button p");
-        console.log(dates);
         dates.forEach(date => {
-            if(date.innerHTML == this.date.getDate()){
-                console.log(this.date.getDay());
-                date.parentElement.setAttribute("style", "background-color: rgba(217, 153, 253, 0.87);");
+            if(date.innerHTML == this.date.getDate() && this.selectedMonth == this.date.getMonth()){
+                date.parentElement.classList.add("currentDay");
             }
         });
     }

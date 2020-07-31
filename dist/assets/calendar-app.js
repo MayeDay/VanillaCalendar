@@ -62,7 +62,7 @@
   });
   _exports.default = void 0;
 
-  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _temp;
+  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _temp;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -85,7 +85,7 @@
               <input type="text" name="" value = {{headerDate}} id="">
           </div>
       <div class="nav-bar">
-          <div class="left-nav"> <button type="submit" {{action 'moveLeft' date}}></button></div>
+          <div class="left-nav"> <button type="submit" {{action 'moveLeft'}}></button></div>
       
           <div class="date">
               <h4>{{formattedDate}}</h4>
@@ -134,9 +134,9 @@
   
   
   */
-  {"id":"b1zeEEJA","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n\\n    \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n        \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n    \\n    \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\",[35,2]],null],[12],[13],[13],[2,\"\\n    \\n        \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[34,3]],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,4]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"    \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,9]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,10]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"date\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
+  {"id":"LdC+p7Mj","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n\\n    \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n        \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n    \\n    \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\"],null],[12],[13],[13],[2,\"\\n    \\n        \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,3]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"    \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,6]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,9]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
 
-  let CalendarComponent = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, (_class = (_temp = class CalendarComponent extends _component.default {
+  let CalendarComponent = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, _dec15 = Ember._tracked, _dec16 = Ember.inject.service("header"), (_class = (_temp = class CalendarComponent extends _component.default {
     constructor(...args) {
       super(...args);
 
@@ -176,6 +176,10 @@
 
       _initializerDefineProperty(this, "nextDayIndex", _descriptor14, this);
 
+      _initializerDefineProperty(this, "currentDay", _descriptor15, this);
+
+      _initializerDefineProperty(this, "services", _descriptor16, this);
+
       _defineProperty(this, "actions", {
         selectDate(day) {
           let dates = document.querySelectorAll(".available button p");
@@ -196,15 +200,13 @@
     }
 
     header() {
-      let prev = new Date(this.date.getFullYear(), this.date.getMonth(), 1);
+      let prev = this.services.getFullDate(this.date.getFullYear(), this.date.getMonth(), 1);
       this.firstDayIndex = prev.getDay();
-      this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
+      this.numberOfDays = this.services.getDays(this.selectedYear, this.selectedMonth);
 
       for (let x = prev.getDay() - 1; x >= 0; x--) {
         this.prevDays.push(this.numberOfDays - x);
       }
-
-      console.log(this.numberOfDays);
 
       for (var i = 1; i < this.numberOfDays + 1; i++) {
         this.days.push(i);
@@ -243,7 +245,6 @@
       this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
       this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
       this.days = [];
-      console.log(new Date(this.selectedYear, this.selectedMonth + 1, 0));
 
       for (var i = 1; i < this.numberOfDays + 1; i++) {
         this.days.push(i);
@@ -276,6 +277,12 @@
       let dates = document.querySelectorAll(".available button p");
       dates.forEach(date => {
         if (date.innerHTML != this.date.getDate()) date.parentElement.setAttribute("style", " background-color: rgba(234, 248, 255, 0.911);");
+
+        if (date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()) {
+          date.parentElement.classList.add("currentDay");
+        } else {
+          date.parentElement.classList.remove("currentDay");
+        }
       });
     }
 
@@ -321,16 +328,20 @@
       let dates = document.querySelectorAll(".available button p");
       dates.forEach(date => {
         date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
+
+        if (date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()) {
+          date.parentElement.classList.add("currentDay");
+        } else {
+          date.parentElement.classList.remove("currentDay");
+        }
       });
     }
 
     render() {
       let dates = document.querySelectorAll(".grid .available button p");
-      console.log(dates);
       dates.forEach(date => {
-        if (date.innerHTML == this.date.getDate()) {
-          console.log(this.date.getDay());
-          date.parentElement.setAttribute("style", "background-color: rgba(217, 153, 253, 0.87);");
+        if (date.innerHTML == this.date.getDate() && this.selectedMonth == this.date.getMonth()) {
+          date.parentElement.classList.add("currentDay");
         }
       });
     }
@@ -433,6 +444,16 @@
     initializer: function () {
       return 1;
     }
+  }), _descriptor15 = _applyDecoratedDescriptor(_class.prototype, "currentDay", [_dec15], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor16 = _applyDecoratedDescriptor(_class.prototype, "services", [_dec16], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
   })), _class));
   _exports.default = CalendarComponent;
 
@@ -773,6 +794,35 @@
       return _rest.default;
     }
   });
+});
+;define("calendar-app/services/header", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  class HeaderService extends Ember.Service {
+    constructor(...args) {
+      super(...args);
+
+      _defineProperty(this, "date", new Date());
+    }
+
+    getDays(year, month) {
+      return new Date(year, month + 1, 0).getDate();
+    }
+
+    getFullDate(year, month, day) {
+      return new Date(year, month, day);
+    }
+
+  }
+
+  _exports.default = HeaderService;
 });
 ;define("calendar-app/services/store", ["exports", "ember-data/store"], function (_exports, _store) {
   "use strict";

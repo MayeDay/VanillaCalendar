@@ -25,6 +25,11 @@
     height: 540px;
 }
 
+.currentDay{
+
+    background-color: rgba(217, 153, 253, 0.87)!important;
+}
+
 .date{
 
     width: 78%;
@@ -64,15 +69,11 @@
     height: 38px;
     background-color: rgba(234, 248, 255, 0.911);
     border:none;
-    
-    
-
-
 }
 
 .eachDay button:hover{
     cursor: pointer;
-    background-color: rgb(123, 167, 248);
+    background-color: rgb(95, 151, 255)!important;
     transition: background-color 0.3s;
 }
 
@@ -186,7 +187,7 @@
     height: 100px;
     text-align: center;
     font-size: x-large;
-    padding-top: 2%;
+    padding-top: 4%;
     
 }
 

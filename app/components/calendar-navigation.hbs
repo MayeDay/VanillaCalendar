@@ -1,0 +1,42 @@
+
+ <div class = "textfield">
+        <input type="text" name="" value = {{headerDate}} id="">
+    </div>
+<div class="nav-bar">
+    <div class="left-nav"> <button type="submit" {{action 'moveLeft' date}}></button></div>
+   
+    <div class="date">
+        <h4>{{formattedDate}}</h4>
+    </div>
+
+    <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
+</div>
+<div class="week">
+{{#each weekdays as |day|}}
+    <div class="day">
+        <h4>{{day}}</h4>
+    </div>
+{{/each}}
+</div>
+    <div class ="grid">
+        {{#each prevDays as |prev|}}
+            <div class="eachDay prev">
+                <button type="submit">{{prev}}</button>
+            </div>
+        {{/each}}
+        {{#each days as |day|}}
+            <div class="eachDay available">
+                <button type="submit" onclick={{action "selectDate" day}}>{{day}}
+                </button>
+            </div>
+        {{/each}}
+        {{#each nextDays as |next|}}
+            <div class="eachDay next">
+                <button type="submit">{{next}}</button>
+            </div>
+        {{/each}}
+    </div>
+    <div class="footer">
+        <label for="" value={{rendering}}></label>
+    </div>
+   

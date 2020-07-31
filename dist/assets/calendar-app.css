@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+.calendar{
+    background-color: white;
+    height: 720px;
+    width: 70%;
+    margin: auto;
+    border: solid black 2px;
+
+
+}
+.container{
+    margin: auto;
+    width: 80%;
+    height: 720px;
+}
+
+.date{
+
+    width: 78%;
+    height: 50px;
+    display: inline-block;
+    float: left;
+    margin: auto;
+}
+
+.date h4{
+
+    text-align: center;
+}
+
+.day{
+    float: left;
+    width: 10%;
+    margin-left: 4.2%;
+    padding-right: 2%;
+    text-shadow: 0.3rem;
+}
+
+.day:first-child{
+}
+
+.eachDay {
+
+    display: inline-block;    
+    width: 13.659%;
+    height: 80px;
+    border: solid black 1px;
+}
+
+.eachDay button{
+    width: 100%;
+    height: 76px;
+    background-color: white;
+    border: none;
+
+
+}
+
+.eachDay button:hover{
+    cursor: pointer;
+    background-color: rgb(123, 167, 248);
+    transition: background-color 0.3s;
+}
+
+
+
+
+.eachMonth{
+
+    width: 70%;
+    margin: auto;
+}
+
+.grid{
+    width: 70%;
+    margin: auto;
+}
+
+.highlight{
+
+    background-color: greenyellow;
+}
+.left-nav button{
+    background-image: url('/assets/images/left.png');
+    width: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
+    float: left;
+    display: inline-block;
+    margin-top: 1%;
+    margin-left: 2% ;
+    margin-right: 2%;
+    border: none;
+    background-color: none;
+    background-color: white;
+
+}
+
+.left-nav button:hover{
+    cursor: pointer;
+}
+
+
+
+.nav-bar{
+
+    width: 70%;
+    height: 60px;
+    margin: auto;
+    border: black solid 2px;
+}
+
+.nav-bar h2{
+      text-align: center;
+}
+
+.prev button, .next button{
+    opacity: 0.3;
+    background-color: grey;
+}
+
+.right-nav button{
+    background-image: url("/assets/images/right.png");
+    width: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
+    float: left;
+    display: inline-block;
+    margin-top: 1%;
+    margin-left: 2%;
+    border: none;
+    background-color: white;
+
+    float: left;
+    display: inline-block;
+    
+}
+
+.right-nav button:hover{
+    cursor: pointer;
+}
+
+.textfield{
+    width: 70%;
+    height: 68px;
+    margin: auto;
+    
+}
+
+.textfield input{
+
+    width: 100%;
+    padding: 2%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+}
+
+.today button{
+
+    background-color: aquamarine;
+    border-color: yellow;
+}
+
+.title{
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.week{
+    width: 70%;
+    height: 60px;
+    border-color: black;
+    border-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    margin: auto;
+}
+
+
+

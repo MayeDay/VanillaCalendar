@@ -229,10 +229,13 @@
     header() {
       let prev = new Date(this.date.getFullYear(), this.date.getMonth(), 1);
       this.firstDayIndex = prev.getDay();
+      this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
 
-      for (let x = prev.getDay(); x > 0; x--) {
-        this.prevDays.push(this.date.getDate() - x);
+      for (let x = prev.getDay() - 1; x >= 0; x--) {
+        this.prevDays.push(this.numberOfDays - x);
       }
+
+      console.log(this.numberOfDays);
 
       for (var i = 1; i < this.numberOfDays + 1; i++) {
         this.days.push(i);
@@ -267,8 +270,7 @@
         this.selectedYear += 1;
       }
 
-      this.selectedMonth += 1; // alert(this.months[this.selectedMonth] + " " + this.selectedYear);
-
+      this.selectedMonth += 1;
       this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
       this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
       this.days = [];
@@ -284,7 +286,7 @@
       this.firstDayIndex = prev.getDay();
 
       for (let x = prev.getDay(); x > 0; x--) {
-        this.prevDays.push(this.date.getDate() - x);
+        this.prevDays.push(this.numberOfDays - x);
       }
 
       this.nextDate = new Date(this.selectedYear, this.selectedMonth + 1, 0);
@@ -329,7 +331,7 @@
       this.firstDayIndex = prev.getDay();
 
       for (let x = prev.getDay(); x > 0; x--) {
-        this.prevDays.push(this.date.getDate() - x);
+        this.prevDays.push(this.numberOfDays - x);
       }
 
       this.nextDate = new Date(this.selectedYear, this.selectedMonth + 1, 0);
@@ -957,7 +959,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("calendar-app/app")["default"].create({"name":"calendar-app","version":"0.0.0+9ae62190"});
+            require("calendar-app/app")["default"].create({"name":"calendar-app","version":"0.0.0+67885b1d"});
           }
         
 //# sourceMappingURL=calendar-app.map

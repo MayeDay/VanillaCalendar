@@ -58,11 +58,13 @@ export default class CalendarNavigationComponent extends Component {
         let prev = new Date(this.date.getFullYear(), this.date.getMonth(),1);
 
         this.firstDayIndex = prev.getDay();
+        this.numberOfDays = new Date(this.selectedYear, this.selectedMonth +1, 0).getDate();
 
-        for(let x = prev.getDay(); x > 0; x--){
-            this.prevDays.push(this.date.getDate() - x);
+        for(let x = prev.getDay()-1; x >= 0; x--){
+            this.prevDays.push(this.numberOfDays - x);
         }
 
+        console.log(this.numberOfDays)
     
         for(var i = 1; i< this.numberOfDays + 1; i++){
             this.days.push(i);
@@ -119,7 +121,6 @@ export default class CalendarNavigationComponent extends Component {
             this.selectedYear += 1;
         }
         this.selectedMonth +=1;
-        // alert(this.months[this.selectedMonth] + " " + this.selectedYear);
         this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
         this.numberOfDays = new Date(this.selectedYear, this.selectedMonth +1, 0).getDate();
 
@@ -138,7 +139,7 @@ export default class CalendarNavigationComponent extends Component {
         this.firstDayIndex = prev.getDay();
 
         for(let x = prev.getDay(); x > 0; x--){
-            this.prevDays.push(this.date.getDate() - x);
+            this.prevDays.push(this.numberOfDays - x);
         }
 
         this.nextDate = new Date(this.selectedYear, this.selectedMonth +1, 0)
@@ -190,7 +191,7 @@ export default class CalendarNavigationComponent extends Component {
         this.firstDayIndex = prev.getDay();
 
         for(let x = prev.getDay(); x > 0; x--){
-            this.prevDays.push(this.date.getDate() - x);
+            this.prevDays.push(this.numberOfDays - x);
         }
        
         this.nextDate = new Date(this.selectedYear, this.selectedMonth +1, 0)

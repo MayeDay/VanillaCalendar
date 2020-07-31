@@ -74,56 +74,58 @@
 
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
-    
-  <div class="title" >
-      <h1>Calendly</h1>
-  </div>
-  <div class ="calendar">
-     
-   <div class = "textfield">
-          <input type="text" name="" value = {{headerDate}} id="">
-      </div>
-  <div class="nav-bar">
-      <div class="left-nav"> <button type="submit" {{action 'moveLeft' date}}></button></div>
-     
-      <div class="date">
-          <h4>{{formattedDate}}</h4>
-      </div>
+    <div class="container">
   
-      <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
-  </div>
-  <div class="week">
-  {{#each weekdays as |day|}}
-      <div class="day">
-          <h4>{{day}}</h4>
+      <div class="title" >
+          <h1>Calendly</h1>
       </div>
-  {{/each}}
-  </div>
-      <div class ="grid">
-          {{#each prevDays as |prev|}}
-              <div class="eachDay prev">
-                  <button type="submit">
-                      <p>{{prev}}</p>
-                  </button>
-              </div>
-          {{/each}}
-          {{#each days as |day|}}
-              <div class="eachDay available">
-                  <button type="submit" onclick={{action "selectDate" day}}>
-                      <p>{{day}}</p>
-                  </button>
-              </div>
-          {{/each}}
-          {{#each nextDays as |next|}}
-              <div class="eachDay next">
-                  <button type="submit">
-                      <p>{{next}}</p>
-                  </button>
-              </div>
-          {{/each}}
+      <div class ="calendar">
+      
+      <div class = "textfield">
+              <input type="text" name="" value = {{headerDate}} id="">
+          </div>
+      <div class="nav-bar">
+          <div class="left-nav"> <button type="submit" {{action 'moveLeft' date}}></button></div>
+      
+          <div class="date">
+              <h4>{{formattedDate}}</h4>
+          </div>
+  
+          <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
       </div>
-      <div class="footer">
-          <label for="" value={{rendering}}></label>
+      <div class="week">
+      {{#each weekdays as |day|}}
+          <div class="day">
+              <h4>{{day}}</h4>
+          </div>
+      {{/each}}
+      </div>
+          <div class ="grid">
+              {{#each prevDays as |prev|}}
+                  <div class="eachDay prev">
+                      <button type="submit">
+                          <p>{{prev}}</p>
+                      </button>
+                  </div>
+              {{/each}}
+              {{#each days as |day|}}
+                  <div class="eachDay available">
+                      <button type="submit" onclick={{action "selectDate" day}}>
+                          <p>{{day}}</p>
+                      </button>
+                  </div>
+              {{/each}}
+              {{#each nextDays as |next|}}
+                  <div class="eachDay next">
+                      <button type="submit">
+                          <p>{{next}}</p>
+                      </button>
+                  </div>
+              {{/each}}
+          </div>
+          <div class="footer">
+              <label for="" value={{rendering}}></label>
+          </div>
       </div>
   </div>
   
@@ -132,7 +134,7 @@
   
   
   */
-  {"id":"qZcSSqpT","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[2,\"\\n\"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n    \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n   \\n \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n        \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n    \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\",[35,2]],null],[12],[13],[13],[2,\"\\n   \\n    \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n        \"],[10,\"h4\"],[12],[1,[34,3]],[13],[2,\"\\n    \"],[13],[2,\"\\n\\n    \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,4]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n        \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                    \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                    \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,9]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                    \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n        \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,10]],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"date\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
+  {"id":"b1zeEEJA","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n\\n    \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n        \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n    \\n    \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\",[35,2]],null],[12],[13],[13],[2,\"\\n    \\n        \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[34,3]],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,4]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"    \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,6],[[30,[36,5],[[30,[36,5],[[35,9]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,10]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"date\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
 
   let CalendarComponent = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, (_class = (_temp = class CalendarComponent extends _component.default {
     constructor(...args) {
@@ -794,8 +796,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "kvovRJ37",
-    "block": "{\"symbols\":[],\"statements\":[[2,\"\\n\"],[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n    \"],[8,\"calendar\",[],[[],[]],null],[2,\"\\n\"],[13],[2,\"\\n\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
+    "id": "rPfrFmOZ",
+    "block": "{\"symbols\":[],\"statements\":[[2,\"\\n    \"],[8,\"calendar\",[],[[],[]],null],[2,\"\\n\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
     "meta": {
       "moduleName": "calendar-app/templates/application.hbs"
     }

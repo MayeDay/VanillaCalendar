@@ -1,89 +1,5 @@
 'use strict';
 
-define("calendar-app/tests/integration/components/calendar-day-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
-  "use strict";
-
-  (0, _qunit.module)('Integration | Component | calendar-day', function (hooks) {
-    (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        <CalendarDay />
-      */
-      {"id":"w9m7LY3u","block":"{\"symbols\":[],\"statements\":[[8,\"calendar-day\",[],[[],[]],null]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), ''); // Template block usage:
-
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        
-            <CalendarDay>
-              template block text
-            </CalendarDay>
-          
-      */
-      {"id":"gMAHhGDF","block":"{\"symbols\":[],\"statements\":[[2,\"\\n      \"],[8,\"calendar-day\",[],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        template block text\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  });
-});
-define("calendar-app/tests/integration/components/calendar-month-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
-  "use strict";
-
-  (0, _qunit.module)('Integration | Component | calendar-month', function (hooks) {
-    (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        <CalendarMonth />
-      */
-      {"id":"qNnGejlH","block":"{\"symbols\":[],\"statements\":[[8,\"calendar-month\",[],[[],[]],null]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), ''); // Template block usage:
-
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        
-            <CalendarMonth>
-              template block text
-            </CalendarMonth>
-          
-      */
-      {"id":"gf7r1p+U","block":"{\"symbols\":[],\"statements\":[[2,\"\\n      \"],[8,\"calendar-month\",[],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        template block text\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  });
-});
-define("calendar-app/tests/integration/components/calendar-navigation-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
-  "use strict";
-
-  (0, _qunit.module)('Integration | Component | calendar-navigation', function (hooks) {
-    (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        <CalendarNavigation />
-      */
-      {"id":"vLMEbTc+","block":"{\"symbols\":[],\"statements\":[[8,\"calendar-navigation\",[],[[],[]],null]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), ''); // Template block usage:
-
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        
-            <CalendarNavigation>
-              template block text
-            </CalendarNavigation>
-          
-      */
-      {"id":"+MkNz6w1","block":"{\"symbols\":[],\"statements\":[[2,\"\\n      \"],[8,\"calendar-navigation\",[],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        template block text\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  });
-});
 define("calendar-app/tests/integration/components/calendar-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
@@ -108,34 +24,6 @@ define("calendar-app/tests/integration/components/calendar-test", ["qunit", "emb
           
       */
       {"id":"G20Zj6gX","block":"{\"symbols\":[],\"statements\":[[2,\"\\n      \"],[8,\"calendar\",[],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        template block text\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  });
-});
-define("calendar-app/tests/integration/components/title-page-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
-  "use strict";
-
-  (0, _qunit.module)('Integration | Component | title-page', function (hooks) {
-    (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        <TitlePage />
-      */
-      {"id":"n3CWvlHz","block":"{\"symbols\":[],\"statements\":[[8,\"title-page\",[],[[],[]],null]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
-      assert.equal(this.element.textContent.trim(), ''); // Template block usage:
-
-      await (0, _testHelpers.render)(Ember.HTMLBars.template(
-      /*
-        
-            <TitlePage>
-              template block text
-            </TitlePage>
-          
-      */
-      {"id":"Ck5GaeeQ","block":"{\"symbols\":[],\"statements\":[[2,\"\\n      \"],[8,\"title-page\",[],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        template block text\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"]],\"hasEval\":false,\"upvars\":[]}","meta":{}}));
       assert.equal(this.element.textContent.trim(), 'template block text');
     });
   });

@@ -19,7 +19,7 @@
         <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
     </div>
     <div class="week">
-    {{#each weekdays as |day|}}
+    {{#each this.services.weekdays as |day|}}
         <div class="day">
             <h4>{{day}}</h4>
         </div>

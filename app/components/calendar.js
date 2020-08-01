@@ -3,10 +3,13 @@ import { tracked } from '@glimmer/tracking';
 import {inject as service} from '@ember/service';
 
 export default class CalendarComponent extends Component {
-    months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    
 
+    @service 
+    ("day-allocation") services;
+    
     date = new Date();
+
     @tracked
     lastdate = new Date();
     
@@ -39,7 +42,7 @@ export default class CalendarComponent extends Component {
     format ="";
 
     @tracked 
-    formattedDate = `${this.months[this.selectedMonth]} ${this.selectedYear}`;
+    formattedDate = `${this.services.months[this.selectedMonth]} ${this.selectedYear}`;
 
     @tracked 
     numberOfDays = this.date.getDate();
@@ -53,19 +56,14 @@ export default class CalendarComponent extends Component {
     @tracked 
     currentDay;
 
-    @service 
-    ("header") services;
-
-
     
     header(){
 
         let prev = this.services.getFullDate(this.date.getFullYear(), this.date.getMonth(), 1);
         
-        this.firstDayIndex = prev.getDay();
-        this.numberOfDays = this.services.getDays(this.selectedYear, this.selectedMonth);
+        this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth);
 
-        for(let x = prev.getDay()-1; x >= 0; x--){
+        for(let x = prev - 1; x >= 0; x--){
             this.prevDays.push(this.numberOfDays - x);
         }
     
@@ -73,28 +71,14 @@ export default class CalendarComponent extends Component {
             this.days.push(i);
         }
 
-       
-
-        let next = new Date(this.date.getFullYear(), this.date.getMonth()+1,1);
-        this.nextDayIndex = next.getDay();
-        // console.log(next.getDay());
-        let max = 42;
         let count = 0;
-        for(let x = this.numberOfDays+this.prevDays.length; x < max; x++){
+        for(let x = this.numberOfDays+this.prevDays.length; x < this.services.totalCalendarSpace; x++){
             count+=1
-            if(this.numberOfDays + this.prevDays.length < max){
+            if(this.numberOfDays + this.prevDays.length < this.services.totalCalendarSpace){
                 this.nextDays.push(count);
             }
         }  
-
-       
-
-        if (this.selectedMonth === 0){
-            this.format = `${this.selectedMonth}/${this.selectedDay}/${this.selectedYear}`;
-        }else{
-            this.format = `${this.selectedMonth + 1}/${this.selectedDay}/${this.selectedYear}`;
-        }
-
+        this.format = this.services.getMDYFormat(this.selectedMonth, this.selectedDay, this.selectedYear);
         return this.format;
     }
 
@@ -102,13 +86,12 @@ export default class CalendarComponent extends Component {
         selectDate(day){
 
             let dates = document.querySelectorAll(".available button p");
-    
+
             for(var i = 0; i < dates.length;i++){
                 if(day == dates[i].innerHTML){
                     dates[i].parentElement.setAttribute("style", "background-color: rgba(123, 167, 248, 0.822);");
                     
-
-                    this.format = `${this.selectedMonth+1}/${day}/${this.selectedYear}`
+                    this.format = this.services.getMDYFormat(this.selectedMonth, day, this.selectedYear);
                     document.querySelector(".textfield input").value = this.format;
                 }else if(this.date.value !=this.date.getDate()){
                     console.log(this.date.value);
@@ -124,7 +107,7 @@ export default class CalendarComponent extends Component {
             this.selectedYear += 1;
         }
         this.selectedMonth +=1;
-        this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
+        this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
         this.numberOfDays = new Date(this.selectedYear, this.selectedMonth +1, 0).getDate();
 
         this.days = [];
@@ -159,17 +142,8 @@ export default class CalendarComponent extends Component {
             }
         }
 
-        let dates = document.querySelectorAll(".available button p");
+        this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
 
-        dates.forEach(date => {
-            if(date.innerHTML !=this.date.getDate())
-            date.parentElement.setAttribute("style", " background-color: rgba(234, 248, 255, 0.911);");
-            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth() &&this.selectedYear == new Date().getFullYear()){
-                date.parentElement.classList.add("currentDay");
-            }else{
-                date.parentElement.classList.remove("currentDay");
-            }
-        });
     }
     
 
@@ -182,7 +156,7 @@ export default class CalendarComponent extends Component {
 
         this.selectedMonth -=1;
 
-        this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
+        this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
         this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
 
         this.days = [];
@@ -217,25 +191,12 @@ export default class CalendarComponent extends Component {
                 this.nextDays.push(count);
             }
         }
-        let dates = document.querySelectorAll(".available button p");
-
-        dates.forEach(date => {
-            date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
-            if(date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth()&&this.selectedYear == new Date().getFullYear()){
-                date.parentElement.classList.add("currentDay");
-            }else{
-                date.parentElement.classList.remove("currentDay");
-            }
-        });
+        this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
 
 
     }
     render(){
-        let dates = document.querySelectorAll(".grid .available button p");
-        dates.forEach(date => {
-            if(date.innerHTML == this.date.getDate() && this.selectedMonth == this.date.getMonth()&&this.selectedYear == new Date().getFullYear()){
-                date.parentElement.classList.add("currentDay");
-            }
-        });
+        this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+
     }
 }

@@ -95,7 +95,7 @@
           <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
       </div>
       <div class="week">
-      {{#each weekdays as |day|}}
+      {{#each this.services.weekdays as |day|}}
           <div class="day">
               <h4>{{day}}</h4>
           </div>
@@ -135,51 +135,47 @@
   
   
   */
-  {"id":"DnqxIwlW","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n\\n    \\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n    \\n    \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n            \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n        \"],[13],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\"],null],[12],[13],[13],[2,\"\\n    \\n        \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,3]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"    \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,6]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,5],[[30,[36,4],[[30,[36,4],[[35,8]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,9]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"weekdays\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
+  {"id":"24FSeTyP","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n\\n    \\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n    \\n    \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n            \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n        \"],[13],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\"],null],[12],[13],[13],[2,\"\\n    \\n        \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"weekdays\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"    \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[35,5]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[35,6]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[35,7]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,8]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"-track-array\",\"each\",\"prevDays\",\"days\",\"nextDays\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
 
-  let CalendarComponent = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, _dec15 = Ember._tracked, _dec16 = Ember.inject.service("header"), (_class = (_temp = class CalendarComponent extends _component.default {
+  let CalendarComponent = (_dec = Ember.inject.service("day-allocation"), _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, _dec15 = Ember._tracked, _dec16 = Ember._tracked, (_class = (_temp = class CalendarComponent extends _component.default {
     constructor(...args) {
       super(...args);
 
-      _defineProperty(this, "months", ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]);
-
-      _defineProperty(this, "weekdays", ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]);
+      _initializerDefineProperty(this, "services", _descriptor, this);
 
       _defineProperty(this, "date", new Date());
 
-      _initializerDefineProperty(this, "lastdate", _descriptor, this);
+      _initializerDefineProperty(this, "lastdate", _descriptor2, this);
 
-      _initializerDefineProperty(this, "nextDate", _descriptor2, this);
+      _initializerDefineProperty(this, "nextDate", _descriptor3, this);
 
       _defineProperty(this, "headerDate", this.header());
 
-      _initializerDefineProperty(this, "rendering", _descriptor3, this);
+      _initializerDefineProperty(this, "rendering", _descriptor4, this);
 
-      _initializerDefineProperty(this, "days", _descriptor4, this);
+      _initializerDefineProperty(this, "days", _descriptor5, this);
 
-      _initializerDefineProperty(this, "prevDays", _descriptor5, this);
+      _initializerDefineProperty(this, "prevDays", _descriptor6, this);
 
-      _initializerDefineProperty(this, "nextDays", _descriptor6, this);
+      _initializerDefineProperty(this, "nextDays", _descriptor7, this);
 
-      _initializerDefineProperty(this, "selectedMonth", _descriptor7, this);
+      _initializerDefineProperty(this, "selectedMonth", _descriptor8, this);
 
-      _initializerDefineProperty(this, "selectedDay", _descriptor8, this);
+      _initializerDefineProperty(this, "selectedDay", _descriptor9, this);
 
-      _initializerDefineProperty(this, "selectedYear", _descriptor9, this);
+      _initializerDefineProperty(this, "selectedYear", _descriptor10, this);
 
-      _initializerDefineProperty(this, "format", _descriptor10, this);
+      _initializerDefineProperty(this, "format", _descriptor11, this);
 
-      _initializerDefineProperty(this, "formattedDate", _descriptor11, this);
+      _initializerDefineProperty(this, "formattedDate", _descriptor12, this);
 
-      _initializerDefineProperty(this, "numberOfDays", _descriptor12, this);
+      _initializerDefineProperty(this, "numberOfDays", _descriptor13, this);
 
-      _initializerDefineProperty(this, "firstDayIndex", _descriptor13, this);
+      _initializerDefineProperty(this, "firstDayIndex", _descriptor14, this);
 
-      _initializerDefineProperty(this, "nextDayIndex", _descriptor14, this);
+      _initializerDefineProperty(this, "nextDayIndex", _descriptor15, this);
 
-      _initializerDefineProperty(this, "currentDay", _descriptor15, this);
-
-      _initializerDefineProperty(this, "services", _descriptor16, this);
+      _initializerDefineProperty(this, "currentDay", _descriptor16, this);
 
       _defineProperty(this, "actions", {
         selectDate(day) {
@@ -188,7 +184,7 @@
           for (var i = 0; i < dates.length; i++) {
             if (day == dates[i].innerHTML) {
               dates[i].parentElement.setAttribute("style", "background-color: rgba(123, 167, 248, 0.822);");
-              this.format = `${this.selectedMonth + 1}/${day}/${this.selectedYear}`;
+              this.format = this.services.getMDYFormat(this.selectedMonth, day, this.selectedYear);
               document.querySelector(".textfield input").value = this.format;
             } else if (this.date.value != this.date.getDate()) {
               console.log(this.date.value);
@@ -202,10 +198,9 @@
 
     header() {
       let prev = this.services.getFullDate(this.date.getFullYear(), this.date.getMonth(), 1);
-      this.firstDayIndex = prev.getDay();
-      this.numberOfDays = this.services.getDays(this.selectedYear, this.selectedMonth);
+      this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth);
 
-      for (let x = prev.getDay() - 1; x >= 0; x--) {
+      for (let x = prev - 1; x >= 0; x--) {
         this.prevDays.push(this.numberOfDays - x);
       }
 
@@ -213,26 +208,17 @@
         this.days.push(i);
       }
 
-      let next = new Date(this.date.getFullYear(), this.date.getMonth() + 1, 1);
-      this.nextDayIndex = next.getDay(); // console.log(next.getDay());
-
-      let max = 42;
       let count = 0;
 
-      for (let x = this.numberOfDays + this.prevDays.length; x < max; x++) {
+      for (let x = this.numberOfDays + this.prevDays.length; x < this.services.totalCalendarSpace; x++) {
         count += 1;
 
-        if (this.numberOfDays + this.prevDays.length < max) {
+        if (this.numberOfDays + this.prevDays.length < this.services.totalCalendarSpace) {
           this.nextDays.push(count);
         }
       }
 
-      if (this.selectedMonth === 0) {
-        this.format = `${this.selectedMonth}/${this.selectedDay}/${this.selectedYear}`;
-      } else {
-        this.format = `${this.selectedMonth + 1}/${this.selectedDay}/${this.selectedYear}`;
-      }
-
+      this.format = this.services.getMDYFormat(this.selectedMonth, this.selectedDay, this.selectedYear);
       return this.format;
     }
 
@@ -243,7 +229,7 @@
       }
 
       this.selectedMonth += 1;
-      this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
+      this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
       this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
       this.days = [];
 
@@ -275,16 +261,7 @@
         }
       }
 
-      let dates = document.querySelectorAll(".available button p");
-      dates.forEach(date => {
-        if (date.innerHTML != this.date.getDate()) date.parentElement.setAttribute("style", " background-color: rgba(234, 248, 255, 0.911);");
-
-        if (date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth() && this.selectedYear == new Date().getFullYear()) {
-          date.parentElement.classList.add("currentDay");
-        } else {
-          date.parentElement.classList.remove("currentDay");
-        }
-      });
+      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
 
     moveLeft() {
@@ -294,7 +271,7 @@
       }
 
       this.selectedMonth -= 1;
-      this.formattedDate = this.months[this.selectedMonth] + " " + this.selectedYear;
+      this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
       this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
       this.days = [];
 
@@ -326,131 +303,117 @@
         }
       }
 
-      let dates = document.querySelectorAll(".available button p");
-      dates.forEach(date => {
-        date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
-
-        if (date.innerHTML == this.date.getDate() && this.selectedMonth == new Date().getMonth() && this.selectedYear == new Date().getFullYear()) {
-          date.parentElement.classList.add("currentDay");
-        } else {
-          date.parentElement.classList.remove("currentDay");
-        }
-      });
+      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
 
     render() {
-      let dates = document.querySelectorAll(".grid .available button p");
-      dates.forEach(date => {
-        if (date.innerHTML == this.date.getDate() && this.selectedMonth == this.date.getMonth() && this.selectedYear == new Date().getFullYear()) {
-          date.parentElement.classList.add("currentDay");
-        }
-      });
+      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
 
-  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "lastdate", [_dec], {
+  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "services", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "lastdate", [_dec2], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return new Date();
     }
-  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "nextDate", [_dec2], {
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "nextDate", [_dec3], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return new Date();
     }
-  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "rendering", [_dec3], {
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "rendering", [_dec4], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.render();
     }
-  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "days", [_dec4], {
+  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "days", [_dec5], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return [];
     }
-  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "prevDays", [_dec5], {
+  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, "prevDays", [_dec6], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return [];
     }
-  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, "nextDays", [_dec6], {
+  }), _descriptor7 = _applyDecoratedDescriptor(_class.prototype, "nextDays", [_dec7], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return [];
     }
-  }), _descriptor7 = _applyDecoratedDescriptor(_class.prototype, "selectedMonth", [_dec7], {
+  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "selectedMonth", [_dec8], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getMonth();
     }
-  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "selectedDay", [_dec8], {
+  }), _descriptor9 = _applyDecoratedDescriptor(_class.prototype, "selectedDay", [_dec9], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getDate();
     }
-  }), _descriptor9 = _applyDecoratedDescriptor(_class.prototype, "selectedYear", [_dec9], {
+  }), _descriptor10 = _applyDecoratedDescriptor(_class.prototype, "selectedYear", [_dec10], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getFullYear();
     }
-  }), _descriptor10 = _applyDecoratedDescriptor(_class.prototype, "format", [_dec10], {
+  }), _descriptor11 = _applyDecoratedDescriptor(_class.prototype, "format", [_dec11], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return "";
     }
-  }), _descriptor11 = _applyDecoratedDescriptor(_class.prototype, "formattedDate", [_dec11], {
+  }), _descriptor12 = _applyDecoratedDescriptor(_class.prototype, "formattedDate", [_dec12], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
-      return `${this.months[this.selectedMonth]} ${this.selectedYear}`;
+      return `${this.services.months[this.selectedMonth]} ${this.selectedYear}`;
     }
-  }), _descriptor12 = _applyDecoratedDescriptor(_class.prototype, "numberOfDays", [_dec12], {
+  }), _descriptor13 = _applyDecoratedDescriptor(_class.prototype, "numberOfDays", [_dec13], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getDate();
     }
-  }), _descriptor13 = _applyDecoratedDescriptor(_class.prototype, "firstDayIndex", [_dec13], {
+  }), _descriptor14 = _applyDecoratedDescriptor(_class.prototype, "firstDayIndex", [_dec14], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return 1;
     }
-  }), _descriptor14 = _applyDecoratedDescriptor(_class.prototype, "nextDayIndex", [_dec14], {
+  }), _descriptor15 = _applyDecoratedDescriptor(_class.prototype, "nextDayIndex", [_dec15], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return 1;
     }
-  }), _descriptor15 = _applyDecoratedDescriptor(_class.prototype, "currentDay", [_dec15], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: null
-  }), _descriptor16 = _applyDecoratedDescriptor(_class.prototype, "services", [_dec16], {
+  }), _descriptor16 = _applyDecoratedDescriptor(_class.prototype, "currentDay", [_dec16], {
     configurable: true,
     enumerable: true,
     writable: true,
@@ -522,55 +485,6 @@
   }
 
   var _default = Ember.Helper.helper(appVersion);
-
-  _exports.default = _default;
-});
-;define("calendar-app/helpers/date-formatter", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Helper.helper(function dateFormatter(params, hash) {
-    let date = hash.date;
-
-    if (!date) {
-      date = new Date();
-    } else {
-      date = date;
-    }
-
-    let year = date.getFullYear(),
-        month = ('0' + (date.getMonth() + 1)).slice(-2),
-        day = ('0' + date.getDate()).slice(-2),
-        formatted = `${month} ${year}`;
-    return formatted;
-    return date;
-  });
-
-  _exports.default = _default;
-});
-;define("calendar-app/helpers/day-loops", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Helper.helper(function dayLoops(params
-  /*, hash*/
-  ) {
-    var range = [];
-
-    for (var i = params[0]; i < params[1]; ++i) {
-      range.push(i);
-    }
-
-    return range;
-  });
 
   _exports.default = _default;
 });
@@ -796,7 +710,7 @@
     }
   });
 });
-;define("calendar-app/services/header", ["exports"], function (_exports) {
+;define("calendar-app/services/day-allocation", ["exports"], function (_exports) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -810,16 +724,51 @@
     constructor(...args) {
       super(...args);
 
-      _defineProperty(this, "date", new Date());
+      _defineProperty(this, "months", ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]);
+
+      _defineProperty(this, "weekdays", ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]);
+
+      _defineProperty(this, "totalCalendarSpace", 42);
     }
 
-    getDays(year, month) {
+    getTotalDaysOfCurrentMonth(year, month) {
       return new Date(year, month + 1, 0).getDate();
     }
 
     getFullDate(year, month, day) {
-      return new Date(year, month, day);
+      return new Date(year, month, day).getDay();
     }
+
+    getFormattedDate(month, year) {
+      return this.months[month] + " " + year;
+    }
+
+    getMDYFormat(month, day, year) {
+      let date = "";
+
+      if (month === 0) {
+        date = `${month + 1}/${day}/${year}`;
+      } else {
+        date = `${month + 1}/${day}/${year}`;
+      }
+
+      return date;
+    }
+
+    updateCalendarDays(day, month, year) {
+      let dates = document.querySelectorAll(".available button p");
+      dates.forEach(date => {
+        date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
+
+        if (date.innerHTML == day && month == new Date().getMonth() && year == new Date().getFullYear()) {
+          date.parentElement.classList.add("currentDay");
+        } else {
+          date.parentElement.classList.remove("currentDay");
+        }
+      });
+    }
+
+    chooseDay(day, month, year) {}
 
   }
 

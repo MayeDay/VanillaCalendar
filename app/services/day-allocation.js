@@ -35,7 +35,7 @@ export default class HeaderService extends Service {
         let date = "";
 
         if (month === 0){
-            date = `${month +1}/${day}/${year}`;
+            date = `${month+1}/${day}/${year}`;
         }else{
             date = `${month+1}/${day}/${year}`;
         }
@@ -75,6 +75,7 @@ export default class HeaderService extends Service {
     currentDays(days){
 
         this.dayList = [];
+
         for(var i = 1; i< days+1; i++){
             this.dayList.push(i);
         }     
@@ -83,19 +84,21 @@ export default class HeaderService extends Service {
     previousDays(day, month, year){
         this.previousDayList = [];
 
-       let lastMonth = new Date(year, month, day);
+        let lastMonth = new Date(year, month, day);
 
-       let daysBeforeMonth = new Date(lastMonth.getFullYear(), lastMonth.getMonth()+1).getDay();
+        let daysBeforeMonth = new Date(lastMonth.getFullYear(), lastMonth.getMonth()+1).getDay();
        
-       for(let x = daysBeforeMonth-1; x >= 0; x--){
-        this.previousDayList.push(lastMonth.getDate() - x);
+        for(let x = daysBeforeMonth-1; x >= 0; x--){
+               this.previousDayList.push(lastMonth.getDate() - x);
         }
     }
 
     nextDays(){
 
         this.nextDayList = [];
+
         let remainingSpaces = this.totalCalendarSpace - (this.dayList.length + this.previousDayList.length);
+        
         for(let x = 1; x < remainingSpaces+1; x++){
             this.nextDayList.push(x);
         }

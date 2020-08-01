@@ -2,7 +2,7 @@ import Service from '@ember/service';
 
 export default class HeaderService extends Service {
 
-    
+    date = new Date();
     months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     totalCalendarSpace = 42;
@@ -45,7 +45,19 @@ export default class HeaderService extends Service {
     }
 
     chooseDay(day, month, year){
+        let dates = document.querySelectorAll(".available button p");
+        
+        dates.forEach(date =>{
+            
+            if(day == date.innerHTML){
+                console.log(day, month, year, date.innerHTML)
+                date.parentElement.setAttribute("style", "background-color: rgba(123, 167, 248, 0.822);");
+                document.querySelector(".textfield input").value = this.getMDYFormat(month, day, year);
+            
+            }else if(date.value != this.date.getDate()){
 
-
+                date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
+            }
+        });
     }
 }

@@ -179,18 +179,7 @@
 
       _defineProperty(this, "actions", {
         selectDate(day) {
-          let dates = document.querySelectorAll(".available button p");
-
-          for (var i = 0; i < dates.length; i++) {
-            if (day == dates[i].innerHTML) {
-              dates[i].parentElement.setAttribute("style", "background-color: rgba(123, 167, 248, 0.822);");
-              this.format = this.services.getMDYFormat(this.selectedMonth, day, this.selectedYear);
-              document.querySelector(".textfield input").value = this.format;
-            } else if (this.date.value != this.date.getDate()) {
-              console.log(this.date.value);
-              dates[i].parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
-            }
-          }
+          this.services.chooseDay(day, this.selectedMonth, this.selectedYear);
         }
 
       });
@@ -724,6 +713,8 @@
     constructor(...args) {
       super(...args);
 
+      _defineProperty(this, "date", new Date());
+
       _defineProperty(this, "months", ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]);
 
       _defineProperty(this, "weekdays", ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]);
@@ -768,7 +759,18 @@
       });
     }
 
-    chooseDay(day, month, year) {}
+    chooseDay(day, month, year) {
+      let dates = document.querySelectorAll(".available button p");
+      dates.forEach(date => {
+        if (day == date.innerHTML) {
+          console.log(day, month, year, date.innerHTML);
+          date.parentElement.setAttribute("style", "background-color: rgba(123, 167, 248, 0.822);");
+          document.querySelector(".textfield input").value = this.getMDYFormat(month, day, year);
+        } else if (date.value != this.date.getDate()) {
+          date.parentElement.setAttribute("style", "background-color: rgba(234, 248, 255, 0.911);");
+        }
+      });
+    }
 
   }
 

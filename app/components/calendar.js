@@ -10,24 +10,10 @@ export default class CalendarComponent extends Component {
     
     date = new Date();
 
-    @tracked
-    lastdate = new Date();
-    
-    @tracked 
-    nextDate = new Date();
-
     headerDate = this.header();
+    
     @tracked
     rendering = this.render();
-
-    @tracked 
-    days =[];
-
-    @tracked
-    prevDays =[];
-
-    @tracked
-    nextDays =[];
 
     @tracked
     selectedMonth = this.date.getMonth();
@@ -39,88 +25,77 @@ export default class CalendarComponent extends Component {
     selectedYear = this.date.getFullYear();
 
     @tracked
-    format ="";
+    format = "";
 
     @tracked 
-    formattedDate = `${this.services.months[this.selectedMonth]} ${this.selectedYear}`;
+    formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
 
     @tracked 
     numberOfDays = this.date.getDate();
 
-    @tracked
-    firstDayIndex = 1;
-
-    @tracked 
-    nextDayIndex = 1;
-
-    @tracked 
-    currentDay;
-
     
     header(){
 
-        
         this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth);
-
         this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-
-    
         this.services.currentDays(this.numberOfDays);
         this.services.nextDays();
-
         this.format = this.services.getMDYFormat(this.selectedMonth, this.selectedDay, this.selectedYear);
+        
         return this.format;
     }
 
     actions = {
         selectDate(day){
             this.services.chooseDay(day, this.selectedMonth, this.selectedYear);
+        },
+        moveRight(){
+
+            if(this.selectedMonth >= 11){
+                this.selectedMonth = -1;
+                this.selectedYear += 1;
+            }
+            this.selectedMonth +=1;
+    
+            this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+            this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
+            this.services.currentDays(this.numberOfDays);
+    
+            this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+    
+            this.services.nextDays();
+    
+            this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+    
+        },
+        moveLeft(){
+
+            if(this.selectedMonth <= 0){
+                this.selectedMonth = 12;
+                this.selectedYear -= 1;
+            }
+    
+            this.selectedMonth -=1;
+    
+            this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+            this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
+    
+            this.days = [];
+    
+            this.services.currentDays(this.numberOfDays);
+            this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+            this.services.nextDays();
+    
+            this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+    
+    
         }
-    }
-    moveRight(){
-
-        if(this.selectedMonth >= 11){
-            this.selectedMonth = -1;
-            this.selectedYear += 1;
-        }
-        this.selectedMonth +=1;
-        this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-        this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
-        this.services.currentDays(this.numberOfDays);
-
-        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-
-        this.services.nextDays();
-
-        this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-
     }
     
+    
 
-       moveLeft(){
-
-        if(this.selectedMonth <= 0){
-            this.selectedMonth = 12;
-            this.selectedYear -= 1;
-        }
-
-        this.selectedMonth -=1;
-
-        this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-        this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
-
-        this.days = [];
-
-        this.services.currentDays(this.numberOfDays);
-        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-        this.services.nextDays();
-
-        this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-
-
-    }
+       
     render(){
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-
     }
 }

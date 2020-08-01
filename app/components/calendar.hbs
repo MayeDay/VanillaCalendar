@@ -1,30 +1,38 @@
 <div class="container">
-
-    
     <div class ="calendar">
-    
-    <div class = "textfield">
-        <div class="title" >
-            <h1>Calendly</h1>
-        </div>
+        <div class = "textfield">
+            <div class="title" >
+                <h1>Calendly</h1>
+            
+            </div>
             <input type="text" name="" value = {{headerDate}} id="">
-    </div>
-    <div class="nav-bar">
-        <div class="left-nav"> <button type="submit" {{action 'moveLeft'}}></button></div>
-    
-        <div class="date">
-            <h4>{{formattedDate}}</h4>
         </div>
 
-        <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
-    </div>
-    <div class="week">
-    {{#each this.services.weekdays as |day|}}
-        <div class="day">
-            <h4>{{day}}</h4>
+        <div class="nav-bar">
+            <div class="left-nav">
+                <button type="submit" onclick={{action 'moveLeft'}}>
+
+                </button>
+            </div>
+        
+            <div class="date">
+                <h4>{{formattedDate}}</h4>
+            </div>
+
+            <div class="right-nav"> 
+                <button type="submit" onclick={{action 'moveRight'}}>
+
+                </button>
+            </div>
         </div>
-    {{/each}}
-    </div>
+
+        <div class="week">
+        {{#each this.services.weekdays as |day|}}
+            <div class="day">
+                <h4>{{day}}</h4>
+            </div>
+        {{/each}}
+        </div>
         <div class ="grid">
             {{#each this.services.previousDayList as |prev|}}
                 <div class="eachDay prev">

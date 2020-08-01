@@ -62,7 +62,7 @@
   });
   _exports.default = void 0;
 
-  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15, _descriptor16, _temp;
+  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -75,32 +75,40 @@
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
     <div class="container">
-  
-      
       <div class ="calendar">
-      
-      <div class = "textfield">
-          <div class="title" >
-              <h1>Calendly</h1>
-          </div>
+          <div class = "textfield">
+              <div class="title" >
+                  <h1>Calendly</h1>
+              
+              </div>
               <input type="text" name="" value = {{headerDate}} id="">
-      </div>
-      <div class="nav-bar">
-          <div class="left-nav"> <button type="submit" {{action 'moveLeft'}}></button></div>
-      
-          <div class="date">
-              <h4>{{formattedDate}}</h4>
           </div>
   
-          <div class="right-nav"> <button type="submit" {{action 'moveRight'}}></button></div>
-      </div>
-      <div class="week">
-      {{#each this.services.weekdays as |day|}}
-          <div class="day">
-              <h4>{{day}}</h4>
+          <div class="nav-bar">
+              <div class="left-nav">
+                  <button type="submit" onclick={{action 'moveLeft'}}>
+  
+                  </button>
+              </div>
+          
+              <div class="date">
+                  <h4>{{formattedDate}}</h4>
+              </div>
+  
+              <div class="right-nav"> 
+                  <button type="submit" onclick={{action 'moveRight'}}>
+  
+                  </button>
+              </div>
           </div>
-      {{/each}}
-      </div>
+  
+          <div class="week">
+          {{#each this.services.weekdays as |day|}}
+              <div class="day">
+                  <h4>{{day}}</h4>
+              </div>
+          {{/each}}
+          </div>
           <div class ="grid">
               {{#each this.services.previousDayList as |prev|}}
                   <div class="eachDay prev">
@@ -135,9 +143,9 @@
   
   
   */
-  {"id":"FimIDtHF","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n\\n    \\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n    \\n    \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n            \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n        \"],[13],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\"],null],[12],[13],[13],[2,\"\\n    \\n        \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[13],[13],[2,\"\\n    \"],[13],[2,\"\\n    \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"weekdays\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n            \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"    \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"previousDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"dayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"nextDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,5]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"-track-array\",\"each\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
+  {"id":"viTPaiXO","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n            \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n                \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n            \\n            \"],[13],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n            \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\"\\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"moveLeft\"],null]],[14,4,\"submit\"],[12],[2,\"\\n\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n        \\n            \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n                \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n            \"],[13],[2,\"\\n\\n            \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"moveRight\"],null]],[14,4,\"submit\"],[12],[2,\"\\n\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"weekdays\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n                \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"previousDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"dayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"nextDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,5]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"-track-array\",\"each\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
 
-  let CalendarComponent = (_dec = Ember.inject.service("day-allocation"), _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, _dec9 = Ember._tracked, _dec10 = Ember._tracked, _dec11 = Ember._tracked, _dec12 = Ember._tracked, _dec13 = Ember._tracked, _dec14 = Ember._tracked, _dec15 = Ember._tracked, _dec16 = Ember._tracked, (_class = (_temp = class CalendarComponent extends _component.default {
+  let CalendarComponent = (_dec = Ember.inject.service("day-allocation"), _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, (_class = (_temp = class CalendarComponent extends _component.default {
     constructor(...args) {
       super(...args);
 
@@ -145,41 +153,56 @@
 
       _defineProperty(this, "date", new Date());
 
-      _initializerDefineProperty(this, "lastdate", _descriptor2, this);
-
-      _initializerDefineProperty(this, "nextDate", _descriptor3, this);
-
       _defineProperty(this, "headerDate", this.header());
 
-      _initializerDefineProperty(this, "rendering", _descriptor4, this);
+      _initializerDefineProperty(this, "rendering", _descriptor2, this);
 
-      _initializerDefineProperty(this, "days", _descriptor5, this);
+      _initializerDefineProperty(this, "selectedMonth", _descriptor3, this);
 
-      _initializerDefineProperty(this, "prevDays", _descriptor6, this);
+      _initializerDefineProperty(this, "selectedDay", _descriptor4, this);
 
-      _initializerDefineProperty(this, "nextDays", _descriptor7, this);
+      _initializerDefineProperty(this, "selectedYear", _descriptor5, this);
 
-      _initializerDefineProperty(this, "selectedMonth", _descriptor8, this);
+      _initializerDefineProperty(this, "format", _descriptor6, this);
 
-      _initializerDefineProperty(this, "selectedDay", _descriptor9, this);
+      _initializerDefineProperty(this, "formattedDate", _descriptor7, this);
 
-      _initializerDefineProperty(this, "selectedYear", _descriptor10, this);
-
-      _initializerDefineProperty(this, "format", _descriptor11, this);
-
-      _initializerDefineProperty(this, "formattedDate", _descriptor12, this);
-
-      _initializerDefineProperty(this, "numberOfDays", _descriptor13, this);
-
-      _initializerDefineProperty(this, "firstDayIndex", _descriptor14, this);
-
-      _initializerDefineProperty(this, "nextDayIndex", _descriptor15, this);
-
-      _initializerDefineProperty(this, "currentDay", _descriptor16, this);
+      _initializerDefineProperty(this, "numberOfDays", _descriptor8, this);
 
       _defineProperty(this, "actions", {
         selectDate(day) {
           this.services.chooseDay(day, this.selectedMonth, this.selectedYear);
+        },
+
+        moveRight() {
+          if (this.selectedMonth >= 11) {
+            this.selectedMonth = -1;
+            this.selectedYear += 1;
+          }
+
+          this.selectedMonth += 1;
+          this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+          this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
+          this.services.currentDays(this.numberOfDays);
+          this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+          this.services.nextDays();
+          this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+        },
+
+        moveLeft() {
+          if (this.selectedMonth <= 0) {
+            this.selectedMonth = 12;
+            this.selectedYear -= 1;
+          }
+
+          this.selectedMonth -= 1;
+          this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+          this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
+          this.days = [];
+          this.services.currentDays(this.numberOfDays);
+          this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+          this.services.nextDays();
+          this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
         }
 
       });
@@ -194,37 +217,6 @@
       return this.format;
     }
 
-    moveRight() {
-      if (this.selectedMonth >= 11) {
-        this.selectedMonth = -1;
-        this.selectedYear += 1;
-      }
-
-      this.selectedMonth += 1;
-      this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-      this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
-      this.services.currentDays(this.numberOfDays);
-      this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-      this.services.nextDays();
-      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-    }
-
-    moveLeft() {
-      if (this.selectedMonth <= 0) {
-        this.selectedMonth = 12;
-        this.selectedYear -= 1;
-      }
-
-      this.selectedMonth -= 1;
-      this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-      this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
-      this.days = [];
-      this.services.currentDays(this.numberOfDays);
-      this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-      this.services.nextDays();
-      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-    }
-
     render() {
       this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
@@ -234,109 +226,55 @@
     enumerable: true,
     writable: true,
     initializer: null
-  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "lastdate", [_dec2], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return new Date();
-    }
-  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "nextDate", [_dec3], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return new Date();
-    }
-  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "rendering", [_dec4], {
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "rendering", [_dec2], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.render();
     }
-  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "days", [_dec5], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return [];
-    }
-  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, "prevDays", [_dec6], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return [];
-    }
-  }), _descriptor7 = _applyDecoratedDescriptor(_class.prototype, "nextDays", [_dec7], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return [];
-    }
-  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "selectedMonth", [_dec8], {
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "selectedMonth", [_dec3], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getMonth();
     }
-  }), _descriptor9 = _applyDecoratedDescriptor(_class.prototype, "selectedDay", [_dec9], {
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "selectedDay", [_dec4], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getDate();
     }
-  }), _descriptor10 = _applyDecoratedDescriptor(_class.prototype, "selectedYear", [_dec10], {
+  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "selectedYear", [_dec5], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getFullYear();
     }
-  }), _descriptor11 = _applyDecoratedDescriptor(_class.prototype, "format", [_dec11], {
+  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, "format", [_dec6], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return "";
     }
-  }), _descriptor12 = _applyDecoratedDescriptor(_class.prototype, "formattedDate", [_dec12], {
+  }), _descriptor7 = _applyDecoratedDescriptor(_class.prototype, "formattedDate", [_dec7], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
-      return `${this.services.months[this.selectedMonth]} ${this.selectedYear}`;
+      return this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
     }
-  }), _descriptor13 = _applyDecoratedDescriptor(_class.prototype, "numberOfDays", [_dec13], {
+  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "numberOfDays", [_dec8], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: function () {
       return this.date.getDate();
     }
-  }), _descriptor14 = _applyDecoratedDescriptor(_class.prototype, "firstDayIndex", [_dec14], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return 1;
-    }
-  }), _descriptor15 = _applyDecoratedDescriptor(_class.prototype, "nextDayIndex", [_dec15], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return 1;
-    }
-  }), _descriptor16 = _applyDecoratedDescriptor(_class.prototype, "currentDay", [_dec16], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: null
   })), _class));
   _exports.default = CalendarComponent;
 
@@ -788,8 +726,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "rPfrFmOZ",
-    "block": "{\"symbols\":[],\"statements\":[[2,\"\\n    \"],[8,\"calendar\",[],[[],[]],null],[2,\"\\n\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
+    "id": "6K0+djXV",
+    "block": "{\"symbols\":[],\"statements\":[[2,\"\\n\"],[8,\"calendar\",[],[[],[]],null],[2,\"\\n\\n\"]],\"hasEval\":false,\"upvars\":[]}",
     "meta": {
       "moduleName": "calendar-app/templates/application.hbs"
     }

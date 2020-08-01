@@ -59,25 +59,15 @@ export default class CalendarComponent extends Component {
     
     header(){
 
-        let prev = this.services.getFullDate(this.date.getFullYear(), this.date.getMonth(), 1);
         
         this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth);
 
-        for(let x = prev - 1; x >= 0; x--){
-            this.prevDays.push(this.numberOfDays - x);
-        }
-    
-        for(var i = 1; i< this.numberOfDays + 1; i++){
-            this.days.push(i);
-        }
+        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
 
-        let count = 0;
-        for(let x = this.numberOfDays+this.prevDays.length; x < this.services.totalCalendarSpace; x++){
-            count+=1
-            if(this.numberOfDays + this.prevDays.length < this.services.totalCalendarSpace){
-                this.nextDays.push(count);
-            }
-        }  
+    
+        this.services.currentDays(this.numberOfDays);
+        this.services.nextDays();
+
         this.format = this.services.getMDYFormat(this.selectedMonth, this.selectedDay, this.selectedYear);
         return this.format;
     }
@@ -95,39 +85,12 @@ export default class CalendarComponent extends Component {
         }
         this.selectedMonth +=1;
         this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-        this.numberOfDays = new Date(this.selectedYear, this.selectedMonth +1, 0).getDate();
+        this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
+        this.services.currentDays(this.numberOfDays);
 
-        this.days = [];
+        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
 
-        for(var i = 1; i< this.numberOfDays + 1; i++){
-            this.days.push(i);
-        }
-
-        this.lastdate = new Date(this.selectedYear, this.selectedMonth +1, 0)
-
-        this.prevDays = [];
-        let prev = new Date(this.lastdate.getFullYear(), this.lastdate.getMonth());
-
-        this.firstDayIndex = prev.getDay();
-
-        for(let x = prev.getDay(); x > 0; x--){
-            this.prevDays.push(this.numberOfDays - x);
-        }
-
-        this.nextDate = new Date(this.selectedYear, this.selectedMonth +1, 0)
-
-        this.nextDays = [];
-        let next = new Date(this.nextDate.getFullYear(), this.nextDate.getMonth());
-
-        this.nextDayIndex = next.getDay();
-        let max = 42;
-        let count = 0;
-        for(let x = this.numberOfDays+this.prevDays.length; x < max; x++){
-            count+=1
-            if(this.numberOfDays + this.prevDays.length < max){
-                this.nextDays.push(count);
-            }
-        }
+        this.services.nextDays();
 
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
 
@@ -148,36 +111,10 @@ export default class CalendarComponent extends Component {
 
         this.days = [];
 
-        for(var i = 1; i< this.numberOfDays +1; i++){
-            this.days.push(i);
-        }
+        this.services.currentDays(this.numberOfDays);
+        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+        this.services.nextDays();
 
-        this.lastdate = new Date(this.selectedYear, this.selectedMonth +1, 0)
-
-        this.prevDays = [];
-        let prev = new Date(this.lastdate.getFullYear(), this.lastdate.getMonth());
-
-        this.firstDayIndex = prev.getDay();
-
-        for(let x = prev.getDay(); x > 0; x--){
-            this.prevDays.push(this.numberOfDays - x);
-        }
-       
-        this.nextDate = new Date(this.selectedYear, this.selectedMonth +1, 0)
-
-        this.nextDays = [];
-        let next = new Date(this.nextDate.getFullYear(), this.nextDate.getMonth());
-
-        this.nextDayIndex = next.getDay();
-
-        let max = 42;
-        let count = 0;
-        for(let x = this.numberOfDays+this.prevDays.length; x < max; x++){
-            count+=1
-            if(this.numberOfDays + this.prevDays.length < max){
-                this.nextDays.push(count);
-            }
-        }
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
 
 

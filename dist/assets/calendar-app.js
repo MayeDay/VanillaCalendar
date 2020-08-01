@@ -79,29 +79,22 @@
           <div class = "textfield">
               <div class="title" >
                   <h1>Calendly</h1>
-              
               </div>
               <input type="text" name="" value = {{headerDate}} id="">
           </div>
-  
           <div class="nav-bar">
               <div class="left-nav">
-                  <button type="submit" onclick={{action 'moveLeft'}}>
-  
+                  <button type="submit" {{action 'moveLeft'}}>
                   </button>
               </div>
-          
               <div class="date">
                   <h4>{{formattedDate}}</h4>
               </div>
-  
               <div class="right-nav"> 
-                  <button type="submit" onclick={{action 'moveRight'}}>
-  
+                  <button type="submit" {{action 'moveRight'}}>
                   </button>
               </div>
           </div>
-  
           <div class="week">
           {{#each this.services.weekdays as |day|}}
               <div class="day">
@@ -119,7 +112,7 @@
               {{/each}}
               {{#each this.services.dayList as |day|}}
                   <div class="eachDay available">
-                      <button type="submit" onclick={{action "selectDate" day}}>
+                      <button type="submit" {{action "selectDate" day}}>
                           <p>{{day}}</p>
                       </button>
                   </div>
@@ -143,17 +136,13 @@
   
   
   */
-  {"id":"viTPaiXO","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n            \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n                \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n            \\n            \"],[13],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n            \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\"\\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"moveLeft\"],null]],[14,4,\"submit\"],[12],[2,\"\\n\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n        \\n            \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n                \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n            \"],[13],[2,\"\\n\\n            \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \\n                \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"moveRight\"],null]],[14,4,\"submit\"],[12],[2,\"\\n\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n        \"],[13],[2,\"\\n\\n        \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"weekdays\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n                \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"previousDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"dayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[10,\"button\"],[15,\"onclick\",[30,[36,0],[[32,0],\"selectDate\",[32,2]],null]],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"nextDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,5]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"-track-array\",\"each\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
+  {"id":"w4iXfSyY","block":"{\"symbols\":[\"next\",\"day\",\"prev\",\"day\"],\"statements\":[[10,\"div\"],[14,0,\"container\"],[12],[2,\"\\n    \"],[10,\"div\"],[14,0,\"calendar\"],[12],[2,\"\\n        \"],[10,\"div\"],[14,0,\"textfield\"],[12],[2,\"\\n            \"],[10,\"div\"],[14,0,\"title\"],[12],[2,\"\\n                \"],[10,\"h1\"],[12],[2,\"Calendly\"],[13],[2,\"\\n            \"],[13],[2,\"\\n            \"],[10,\"input\"],[14,3,\"\"],[15,2,[34,1]],[14,1,\"\"],[14,4,\"text\"],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"nav-bar\"],[12],[2,\"\\n            \"],[10,\"div\"],[14,0,\"left-nav\"],[12],[2,\"\\n                \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveLeft\"],null],[12],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n            \"],[10,\"div\"],[14,0,\"date\"],[12],[2,\"\\n                \"],[10,\"h4\"],[12],[1,[34,2]],[13],[2,\"\\n            \"],[13],[2,\"\\n            \"],[10,\"div\"],[14,0,\"right-nav\"],[12],[2,\" \\n                \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"moveRight\"],null],[12],[2,\"\\n                \"],[13],[2,\"\\n            \"],[13],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"week\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"weekdays\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"day\"],[12],[2,\"\\n                \"],[10,\"h4\"],[12],[1,[32,4]],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[4]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"grid\"],[12],[2,\"\\n\"],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"previousDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay prev\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,3]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[3]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"dayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay available\"],[12],[2,\"\\n                    \"],[11,\"button\"],[24,4,\"submit\"],[4,[38,0],[[32,0],\"selectDate\",[32,2]],null],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,2]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[2]}]]],[6,[37,4],[[30,[36,3],[[30,[36,3],[[32,0,[\"services\",\"nextDayList\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"                \"],[10,\"div\"],[14,0,\"eachDay next\"],[12],[2,\"\\n                    \"],[10,\"button\"],[14,4,\"submit\"],[12],[2,\"\\n                        \"],[10,\"p\"],[12],[1,[32,1]],[13],[2,\"\\n                    \"],[13],[2,\"\\n                \"],[13],[2,\"\\n\"]],\"parameters\":[1]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"footer\"],[12],[2,\"\\n            \"],[10,\"label\"],[14,\"for\",\"\"],[15,2,[34,5]],[12],[13],[2,\"\\n        \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"],[13],[2,\"\\n\\n   \\n\\n\\n\"]],\"hasEval\":false,\"upvars\":[\"action\",\"headerDate\",\"formattedDate\",\"-track-array\",\"each\",\"rendering\"]}","meta":{"moduleName":"calendar-app/components/calendar.hbs"}});
 
   let CalendarComponent = (_dec = Ember.inject.service("day-allocation"), _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._tracked, _dec6 = Ember._tracked, _dec7 = Ember._tracked, _dec8 = Ember._tracked, (_class = (_temp = class CalendarComponent extends _component.default {
     constructor(...args) {
       super(...args);
 
       _initializerDefineProperty(this, "services", _descriptor, this);
-
-      _defineProperty(this, "date", new Date());
-
-      _defineProperty(this, "headerDate", this.header());
 
       _initializerDefineProperty(this, "rendering", _descriptor2, this);
 
@@ -169,43 +158,13 @@
 
       _initializerDefineProperty(this, "numberOfDays", _descriptor8, this);
 
-      _defineProperty(this, "actions", {
-        selectDate(day) {
-          this.services.chooseDay(day, this.selectedMonth, this.selectedYear);
-        },
+      _defineProperty(this, "date", new Date());
 
-        moveRight() {
-          if (this.selectedMonth >= 11) {
-            this.selectedMonth = -1;
-            this.selectedYear += 1;
-          }
+      _defineProperty(this, "headerDate", this.header());
+    }
 
-          this.selectedMonth += 1;
-          this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-          this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
-          this.services.currentDays(this.numberOfDays);
-          this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-          this.services.nextDays();
-          this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-        },
-
-        moveLeft() {
-          if (this.selectedMonth <= 0) {
-            this.selectedMonth = 12;
-            this.selectedYear -= 1;
-          }
-
-          this.selectedMonth -= 1;
-          this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-          this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
-          this.days = [];
-          this.services.currentDays(this.numberOfDays);
-          this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-          this.services.nextDays();
-          this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-        }
-
-      });
+    render() {
+      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
 
     header() {
@@ -217,7 +176,39 @@
       return this.format;
     }
 
-    render() {
+    selectDate(day) {
+      this.services.chooseDay(day, this.selectedMonth, this.selectedYear);
+    }
+
+    moveRight() {
+      if (this.selectedMonth >= 11) {
+        this.selectedMonth = -1;
+        this.selectedYear += 1;
+      }
+
+      this.selectedMonth += 1;
+      this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+      this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
+      this.services.currentDays(this.numberOfDays);
+      this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+      this.services.nextDays();
+      this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+    }
+
+    moveLeft() {
+      this.days = [];
+
+      if (this.selectedMonth <= 0) {
+        this.selectedMonth = 12;
+        this.selectedYear -= 1;
+      }
+
+      this.selectedMonth -= 1;
+      this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+      this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
+      this.services.currentDays(this.numberOfDays);
+      this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+      this.services.nextDays();
       this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
 
@@ -595,13 +586,13 @@
 
       _defineProperty(this, "weekdays", ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]);
 
+      _defineProperty(this, "totalCalendarSpace", 42);
+
       _initializerDefineProperty(this, "previousDayList", _descriptor, this);
 
       _initializerDefineProperty(this, "nextDayList", _descriptor2, this);
 
       _initializerDefineProperty(this, "dayList", _descriptor3, this);
-
-      _defineProperty(this, "totalCalendarSpace", 42);
     }
 
     getTotalDaysOfCurrentMonth(year, month) {
@@ -726,8 +717,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "6K0+djXV",
-    "block": "{\"symbols\":[],\"statements\":[[2,\"\\n\"],[8,\"calendar\",[],[[],[]],null],[2,\"\\n\\n\"]],\"hasEval\":false,\"upvars\":[]}",
+    "id": "XF948ya9",
+    "block": "{\"symbols\":[],\"statements\":[[8,\"calendar\",[],[[],[]],null]],\"hasEval\":false,\"upvars\":[]}",
     "meta": {
       "moduleName": "calendar-app/templates/application.hbs"
     }

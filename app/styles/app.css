@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
 }
-
 .available button{
     border: none;
     margin: 0;
@@ -12,260 +11,173 @@
 }
 .calendar{
     background-color: white;
-    height: 545px;
-    width: 100%;
-    margin: auto;
     border: solid rgb(0, 0, 0) 2px;
     border-radius: 10%;
-
-
-}
-
-
-@media screen and (max-width: 600px) and (min-width: 320px) { 
-    .calendar{
-        width: 98%;
-        height: 550px;
-        position: absolute;
-        left: 5px;
-    }
-
-    .eachDay{
-
-        width: 2.459%;
-        height: 40px;    
-    }
-
-    .eachDay button{
-
-        width: 2.459%;
-        height: 40px;
-        position: relative;
-    }
-
-    .nav-bar{
-        width: 80%;
-        height: 40px;
-        margin: auto;
-        border-top: black solid 2px;
-    }
-}
-
-
-.container{
-    margin: auto;
-    width: 30%;
     height: 545px;
-    margin-top: 5%;
+    margin: auto;
+    width: 40%;
 }
-    
-
+.container{
+    height: 545px;
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+}
 .currentDay{
-
     background-color: rgba(217, 153, 253, 0.87)!important;
 }
-
 .date{
-
-    width: 78%;
-    height: 50px;
+    color: rgba(110, 107, 107, 0.89);
     display: inline-block;
     float: left;
-    margin: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgba(110, 107, 107, 0.89);
+    height: 50px;
+    margin: auto;
     margin-top: 3.5%;
+    width: 78%;
 }
-
 .date h4{
-
     text-align: center;
 }
-
 .day{
     float: left;
-    width: 10%;
     margin-left: 4%;
     padding-right: 2%;
+    width: 10%;
 }
-
-
-
 .eachDay {
-
+    border-radius: 10%;  
     display: inline-block;    
-    width: 13.459%;
     height: 40px;
-    border-radius: 10%;
-    
+    width: 13.459%;
 }
-
 .eachDay button{
-    width: 100%;
-    height: 38px;
     background-color: rgba(234, 248, 255, 0.911);
     border-radius: 10%;
+    height: 38px;
     vertical-align: top;
-
+    width: 100%;
 }
-
 .eachDay button:hover{
-    cursor: pointer;
     background-color: rgb(95, 151, 255)!important;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
-
-
-
 .eachDay p{
     color: rgba(150, 150, 150, 0.856);
     display: inline-block;
     font-size:xx-small;
-    text-align: start;
     padding-bottom: 30%;
     padding-right: 65%;
     position: relative;
+    text-align: start;
 }
-
 .grid{
-    width: 95%;
     margin: auto;
+    width: 95%;
 }
-
 .highlight{
-
     background-color: greenyellow;
 }
 .left-nav button{
+    background-color: white;
     background-image: url('/assets/images/left.png');
-    width: 28px;
-    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 28px;
-    float: left;
+    background-size: contain;
+    border: none;
     display: inline-block;
+    float: left;
+    height: 28px;
     margin-top: 3%;
     margin-left: 2% ;
     margin-right: 2%;
-    border: none;
-    background-color: none;
-    background-color: white;
     outline: none;
-    
-
+    width: 28px;
 }
-
 .left-nav button:hover{
-    cursor: pointer;
     background-color: rgba(171, 220, 245, 0.911);
-    transition: ease-in-out;
-    transition-duration: .5s;
-    border-radius: 15%;
     border: rgba(0, 170, 255, 0.911) 2px dashed;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: .5s; 
 }
-
-
-
-
-
 .nav-bar{
-
-    width: 100%;
+    border-top: black solid 2px;
     height: 60px;
     margin: auto;
-    border-top: black solid 2px;
+    width: 100%;
 }
-
 .nav-bar h2{
-      text-align: center;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      color: rgba(110, 107, 107, 0.89);
-     
-    }
-
+    color: rgba(110, 107, 107, 0.89);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
 .prev, .next{
     border: none;
 }
-
 .prev button, .next button{
-    opacity: 0.3;
     background-color: rgba(212, 211, 211, 0.863);
     border: none;
     margin: 0;
+    opacity: 0.3;
     padding: 0;
 }
-
 .right-nav button{
+    background-color: white;
     background-image: url("/assets/images/right.png");
-    width: 28px;
-    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 28px;
-    float: left;
+    background-size: contain;
+    border: none;
     display: inline-block;
+    float: left;
+    height: 28px;
     margin-top: 3%;
     margin-left: 2%;
-    border: none;
-    background-color: white;
-
-    float: left;
-    display: inline-block;
-    outline: none;
-
-    
+    outline: none; 
+    width: 28px;
 }
-
 .right-nav button:hover{
-    cursor: pointer;
     background-color: rgba(171, 220, 245, 0.911);
+    border: rgba(0, 170, 255, 0.911) 2px dashed;
+    border-radius: 15%;
+    cursor: pointer;
     transition: ease-in-out;
     transition-duration: .5s;
-    border-radius: 15%;
-    border: rgba(0, 170, 255, 0.911) 2px dashed;
 }
-
 .textfield{
-    width: 100%;
+    border-radius: 10%;
     height: 150px;
     margin: auto;
-    border-radius: 10%;
-
+    width: 100%;
 }
-
 .textfield input{
-
-    width: 60%;
-    padding: 2%;
+    border: solid black 2px;
     margin-top: -3%;
     margin-bottom: 4%;
     margin-left: 20%;
-    border: solid black 2px;
-
+    padding: 2%;
+    width: 60%;
 }
-
 .title{
-    margin: auto;
-    width: 100%;
-    height: 100px;
-    text-align: center;
     font-size: x-large;
-    padding-top: 4%;
-    
-    
+    height: 100px;
+    margin: auto;
+    padding-top: 4%;  
+    text-align: center;
+    width: 100%;
 }
-
 .week{
-    width: 95%;
     height: 40px;
     margin: auto;
+    width: 95%;
 }
-
 .week h4{
-    text-align: center;
-    font-family: serif;
     color: rgba(110, 107, 107, 0.89);
+    font-family: serif;
+    text-align: center;
 }
 
 

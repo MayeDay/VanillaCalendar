@@ -3,29 +3,22 @@
         <div class = "textfield">
             <div class="title" >
                 <h1>Calendly</h1>
-            
             </div>
             <input type="text" name="" value = {{headerDate}} id="">
         </div>
-
         <div class="nav-bar">
             <div class="left-nav">
-                <button type="submit" onclick={{action 'moveLeft'}}>
-
+                <button type="submit" {{action 'moveLeft'}}>
                 </button>
             </div>
-        
             <div class="date">
                 <h4>{{formattedDate}}</h4>
             </div>
-
             <div class="right-nav"> 
-                <button type="submit" onclick={{action 'moveRight'}}>
-
+                <button type="submit" {{action 'moveRight'}}>
                 </button>
             </div>
         </div>
-
         <div class="week">
         {{#each this.services.weekdays as |day|}}
             <div class="day">
@@ -43,7 +36,7 @@
             {{/each}}
             {{#each this.services.dayList as |day|}}
                 <div class="eachDay available">
-                    <button type="submit" onclick={{action "selectDate" day}}>
+                    <button type="submit" {{action "selectDate" day}}>
                         <p>{{day}}</p>
                     </button>
                 </div>

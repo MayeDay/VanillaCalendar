@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    src: url(`https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap`);
+    src: url(`https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Playfair+Display&display=swap`);
 }
 .available button{
     border: none;
@@ -31,20 +33,20 @@
     color: rgba(110, 107, 107, 0.89);
     display: inline-block;
     float: left;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 50px;
     margin: auto;
-    margin-top: 3.5%;
+    margin-top: 4%;
     width: 78%;
 }
 .date h4{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
     text-align: center;
 }
 .day{
     float: left;
-    margin-left: 4%;
-    padding-right: 2%;
-    width: 10%;
+    width: 12%;
+    margin-right: 2.2%;
 }
 .eachDay {
     border-radius: 10%;  
@@ -164,12 +166,19 @@
     width: 60%;
 }
 .title{
-    font-size: x-large;
+    
     height: 100px;
     margin: auto;
-    padding-top: 4%;  
+    padding-top: 6%;  
     text-align: center;
     width: 100%;
+}
+
+.title h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    letter-spacing: 8px;
+
 }
 .week{
     height: 40px;
@@ -178,7 +187,9 @@
 }
 .week h4{
     color: rgba(110, 107, 107, 0.89);
-    font-family: serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Playfair Display', serif;    
+    font-weight: lighter;
     text-align: center;
 }
 

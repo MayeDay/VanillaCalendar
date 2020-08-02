@@ -250,9 +250,7 @@
     configurable: true,
     enumerable: true,
     writable: true,
-    initializer: function () {
-      return this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-    }
+    initializer: null
   }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "numberOfDays", [_dec8], {
     configurable: true,
     enumerable: true,

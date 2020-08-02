@@ -10,7 +10,7 @@ export default class CalendarComponent extends Component {
     @tracked selectedDay = this.date.getDate();
     @tracked selectedYear = this.date.getFullYear();
     @tracked format = "";
-    @tracked formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
+    @tracked formattedDate;
     @tracked numberOfDays = this.date.getDate();
     date = new Date();
     selectedDate = this.onLoad();
@@ -45,18 +45,14 @@ export default class CalendarComponent extends Component {
         }
         this.selectedMonth -=1;
         this.navigationLoader();
-        
     }
 
     navigationLoader(){
-
         this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
         this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
         this.services.previousDays(0, this.selectedMonth, this.selectedYear);
         this.services.currentDays(this.numberOfDays);
         this.services.nextDays();
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
-
-
     }
 }

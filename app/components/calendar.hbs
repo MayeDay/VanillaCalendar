@@ -41,16 +41,14 @@
                     </button>
                 </div>
             {{/each}}
+            {{rendering}}
             {{#each this.services.nextDayList as |next|}}
                 <div class="eachDay next">
                     <button type="submit">
-                        <p>{{next}}</p>
+                        <p>{{next}}</p>             
                     </button>
                 </div>
             {{/each}}
-        </div>
-        <div class="footer">
-            <label for="" value={{rendering}}></label>
         </div>
     </div>
 </div>

@@ -30,7 +30,7 @@
     background-color: rgba(217, 153, 253, 0.87)!important;
 }
 .date{
-    color: rgba(110, 107, 107, 0.89);
+    color: rgba(0, 0, 0, 0.89);
     display: inline-block;
     float: left;
     height: 50px;
@@ -82,7 +82,7 @@
     transition: background-color 0.3s;
 }
 .eachDay p{
-    color: rgba(150, 150, 150, 0.856);
+    color: rgba(0, 0, 0, 0.541);
     display: inline-block;
     font-size:x-small;
     padding-bottom: 30%;
@@ -206,7 +206,7 @@
     width: 95%;
 }
 .week h4{
-    color: rgba(110, 107, 107, 0.89);
+    color: rgba(0, 0, 0, 0.89);
     font-family: 'Nanum Gothic', sans-serif;
     font-family: 'Playfair Display', serif;    
     font-weight: lighter;

@@ -20,10 +20,7 @@ export default class CalendarComponent extends Component {
     }
 
     onLoad(){
-        this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth);
-        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-        this.services.currentDays(this.numberOfDays);
-        this.services.nextDays();
+        this.navigationLoader();
         this.format = this.services.getMDYFormat(this.selectedMonth, this.selectedDay, this.selectedYear);
         return this.format;
     }
@@ -38,21 +35,20 @@ export default class CalendarComponent extends Component {
             this.selectedYear += 1;
         }
         this.selectedMonth +=1;
-        this.navigationLoad();
+        this.navigationLoader();
     }
 
     moveLeft(){
-        this.days = [];
         if(this.selectedMonth <= 0){
             this.selectedMonth = 12;
             this.selectedYear -= 1;
         }
         this.selectedMonth -=1;
-        this.navigationLoad();
+        this.navigationLoader();
         
     }
 
-    navigationLoad(){
+    navigationLoader(){
 
         this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
         this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);

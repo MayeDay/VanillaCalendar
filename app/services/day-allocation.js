@@ -70,7 +70,6 @@ export default class HeaderService extends Service {
         this.previousDayList = [];
         let lastMonth = new Date(year, month, day);
         let daysBeforeMonth = new Date(lastMonth.getFullYear(), lastMonth.getMonth()+1).getDay();
-
         for(let x = daysBeforeMonth-1; x >= 0; x--){
                this.previousDayList.push(lastMonth.getDate() - x);
         }

@@ -13,13 +13,13 @@ export default class CalendarComponent extends Component {
     @tracked formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
     @tracked numberOfDays = this.date.getDate();
     date = new Date();
-    headerDate = this.header();
+    selectedDate = this.onLoad();
 
     render(){
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }
 
-    header(){
+    onLoad(){
         this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth);
         this.services.previousDays(0, this.selectedMonth, this.selectedYear);
         this.services.currentDays(this.numberOfDays);
@@ -38,12 +38,7 @@ export default class CalendarComponent extends Component {
             this.selectedYear += 1;
         }
         this.selectedMonth +=1;
-        this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-        this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
-        this.services.currentDays(this.numberOfDays);
-        this.services.previousDays(0, this.selectedMonth, this.selectedYear);
-        this.services.nextDays();
-        this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+        this.navigationLoad();
     }
 
     moveLeft(){
@@ -53,11 +48,19 @@ export default class CalendarComponent extends Component {
             this.selectedYear -= 1;
         }
         this.selectedMonth -=1;
+        this.navigationLoad();
+        
+    }
+
+    navigationLoad(){
+
         this.formattedDate = this.services.getFormattedDate(this.selectedMonth, this.selectedYear);
-        this.numberOfDays = new Date(this.selectedYear, this.selectedMonth + 1, 0).getDate();
-        this.services.currentDays(this.numberOfDays);
+        this.numberOfDays = this.services.getTotalDaysOfCurrentMonth(this.selectedYear, this.selectedMonth, 0);
         this.services.previousDays(0, this.selectedMonth, this.selectedYear);
+        this.services.currentDays(this.numberOfDays);
         this.services.nextDays();
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
+
+
     }
 }

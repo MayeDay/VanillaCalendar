@@ -45,8 +45,21 @@
 }
 .day{
     float: left;
-    width: 11%;
-    margin-right: 3.2%;
+    width: 10.5%;
+    margin-right: 4%;
+}
+
+.day:first-child{
+    padding-left: 2%;
+}
+
+.day:nth-child(2), .day:nth-child(3){
+    padding-left: 2%;
+}
+
+.day:last-child{
+    width: 10;
+    margin-right: 0;
 }
 .eachDay {
     border-radius: 10%;  

@@ -14,7 +14,7 @@ export default class CalendarComponent extends Component {
     @tracked numberOfDays = this.date.getDate();
     date = new Date();
     selectedDate = this.onLoad();
-
+    
     render(){
         this.services.updateCalendarDays(this.date.getDate(), this.selectedMonth, this.selectedYear);
     }

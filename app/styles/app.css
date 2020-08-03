@@ -94,9 +94,6 @@
     margin: auto;
     width: 95%;
 }
-.highlight{
-    background-color: greenyellow;
-}
 .left-nav button{
     background-color: white;
     background-image: url('/assets/images/left.png');
@@ -143,7 +140,6 @@
     padding: 0;
 }
 .prev button p, .next button p{
-
     color: black;
 }
 .right-nav button{
@@ -186,8 +182,7 @@
     padding: 2%;
     width: 60%;
 }
-.title{
-    
+.title{ 
     height: 100px;
     margin: auto;
     padding-top: 6%;  
@@ -213,6 +208,3 @@
     letter-spacing: 2px;
     text-align: center;
 }
-
-
-
